@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class InvisableTiles : MonoBehaviour
+public class Invisable : MonoBehaviour
 {
     void Start()
     {
