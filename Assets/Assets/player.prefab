@@ -13,9 +13,10 @@ GameObject:
   - component: {fileID: 5190746449239563413}
   - component: {fileID: 5776620025045687123}
   - component: {fileID: 1345027364912723575}
+  - component: {fileID: 6571714504594615148}
   m_Layer: 0
   m_Name: player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -168,3 +169,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rigidbody: {fileID: 5776620025045687123}
   speed: 1500
+--- !u!114 &6571714504594615148
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 744218735231174666}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2397d9482da3d304385d29b712d4b9ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
