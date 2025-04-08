@@ -39,9 +39,9 @@ ScriptedImporter:
   spriteData:
     TessellationDetail: 0
     SpriteRect:
-      name: 
+      name: stair left-topSprite
       originalName: 
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.50000006, y: 0.5}
       alignment: 0
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
@@ -49,7 +49,22 @@ ScriptedImporter:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 0
-        height: 0
+        width: 100
+        height: 100
       spriteID: ba250c164cc9cd04b93e5b61eec10b99
-    PhysicsOutlines: []
+    PhysicsOutlines:
+    - Vertices:
+      - {x: 50, y: 0}
+      - {x: 33, y: 0}
+      - {x: 33, y: 10}
+      - {x: 17, y: 10}
+      - {x: 17, y: 20}
+      - {x: 0, y: 20}
+      - {x: 0, y: 30}
+      - {x: -17, y: 30}
+      - {x: -17, y: 40}
+      - {x: -33, y: 40}
+      - {x: -33, y: 49}
+      - {x: -50, y: 49}
+      - {x: -50, y: 50}
+      - {x: 50, y: 50}
