@@ -14,7 +14,7 @@ ScriptedImporter:
   gradientResolution: 64
   alignment: 0
   customPivot: {x: 0, y: 0}
-  generatePhysicsShape: 0
+  generatePhysicsShape: 1
   viewportOptions: 0
   preserveViewport: 0
   advancedMode: 0
@@ -39,9 +39,9 @@ ScriptedImporter:
   spriteData:
     TessellationDetail: 0
     SpriteRect:
-      name: 
+      name: stairs rightSprite
       originalName: 
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.50000006, y: 0.5}
       alignment: 0
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
@@ -49,7 +49,37 @@ ScriptedImporter:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 0
-        height: 0
+        width: 100
+        height: 100
       spriteID: 95e165b50cc2bfd40bb7c254bfc6cd07
-    PhysicsOutlines: []
+    PhysicsOutlines:
+    - Vertices:
+      - {x: -33, y: -49}
+      - {x: -33, y: -40}
+      - {x: -17, y: -40}
+      - {x: -17, y: -30}
+      - {x: 0, y: -30}
+      - {x: 0, y: -20}
+      - {x: 16, y: -20}
+      - {x: 16, y: -10}
+      - {x: 33, y: -10}
+      - {x: 33, y: 0}
+      - {x: 50, y: 0}
+      - {x: 50, y: -50}
+      - {x: -50, y: -50}
+      - {x: -50, y: -49}
+    - Vertices:
+      - {x: -50, y: 0}
+      - {x: -34, y: 0}
+      - {x: -34, y: 10}
+      - {x: -17, y: 10}
+      - {x: -17, y: 20}
+      - {x: 0, y: 20}
+      - {x: 0, y: 30}
+      - {x: 17, y: 30}
+      - {x: 17, y: 40}
+      - {x: 33, y: 40}
+      - {x: 33, y: 49}
+      - {x: 50, y: 49}
+      - {x: 50, y: 50}
+      - {x: -50, y: 50}
