@@ -15,7 +15,6 @@
    inkscape:version="1.3.2 (091e20e, 2023-11-25, custom)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-   xmlns:xlink="http://www.w3.org/1999/xlink"
    xmlns="http://www.w3.org/2000/svg"
    xmlns:svg="http://www.w3.org/2000/svg">
   <sodipodi:namedview
@@ -27,9 +26,9 @@
      inkscape:pageopacity="0.0"
      inkscape:pagecheckerboard="true"
      inkscape:deskcolor="#d1d1d1"
-     inkscape:zoom="4"
-     inkscape:cx="39.375"
-     inkscape:cy="85.5"
+     inkscape:zoom="5.6568543"
+     inkscape:cx="45.519999"
+     inkscape:cy="47.552931"
      inkscape:window-width="1920"
      inkscape:window-height="1010"
      inkscape:window-x="4914"
@@ -37,104 +36,66 @@
      inkscape:window-maximized="1"
      inkscape:current-layer="SVGRoot" />
   <defs
-     id="defs4787">
-    <linearGradient
-       id="linearGradient3"
-       inkscape:collect="always">
-      <stop
-         style="stop-color:#808080;stop-opacity:1;"
-         offset="0"
-         id="stop3" />
-      <stop
-         style="stop-color:#404040;stop-opacity:1;"
-         offset="1"
-         id="stop4" />
-    </linearGradient>
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient3"
-       id="linearGradient4"
-       x1="49.999569"
-       y1="-50.00172"
-       x2="49.999565"
-       y2="-41.668381"
-       gradientUnits="userSpaceOnUse"
-       gradientTransform="matrix(1,0,0,0.91663845,8.5783005e-4,138.41655)" />
-  </defs>
+     id="defs4787" />
   <rect
-     style="display:none;fill:url(#linearGradient4);fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:9.3162;stroke-linecap:round;stroke-linejoin:round;paint-order:fill markers stroke"
-     id="rect1"
+     style="display:none;fill:#808080;fill-rule:evenodd;stroke-width:9;stroke-linecap:round;stroke-linejoin:round;paint-order:fill markers stroke"
+     id="rect22"
      width="100.00085"
-     height="7.6386561"
-     x="1.7763568e-15"
-     y="92.583054"
-     ry="1.0103749e-06"
-     sodipodi:type="rect" />
+     height="49.942894"
+     x="0"
+     y="50.060547" />
   <rect
-     style="display:inline;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:5.96981;stroke-linecap:round;stroke-linejoin:round;paint-order:fill markers stroke"
-     id="rect3"
-     width="48"
-     height="15.278092"
-     x="-92.581001"
-     y="84.722755"
-     sodipodi:type="rect"
-     transform="rotate(-90)" />
-  <rect
-     style="display:inline;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:5.96981;stroke-linecap:round;stroke-linejoin:round;paint-order:fill markers stroke"
-     id="rect15"
-     width="48"
-     height="15.278092"
-     x="-85.161003"
-     y="71.180519"
-     sodipodi:type="rect"
-     transform="rotate(-90)" />
-  <rect
-     style="display:inline;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:5.96981;stroke-linecap:round;stroke-linejoin:round;paint-order:fill markers stroke"
-     id="rect16"
-     width="48"
-     height="15.278092"
-     x="-77.740997"
-     y="55.902"
-     sodipodi:type="rect"
-     transform="rotate(-90)" />
-  <rect
-     style="display:inline;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:5.96981;stroke-linecap:round;stroke-linejoin:round;paint-order:fill markers stroke"
-     id="rect17"
-     width="48"
-     height="15.278092"
-     x="-70.320999"
-     y="40.624336"
-     sodipodi:type="rect"
-     transform="rotate(-90)" />
-  <rect
-     style="display:inline;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:5.96981;stroke-linecap:round;stroke-linejoin:round;paint-order:fill markers stroke"
-     id="rect18"
-     width="48"
-     height="15.278092"
-     x="-62.901001"
-     y="25.346245"
-     sodipodi:type="rect"
-     transform="rotate(-90)" />
-  <rect
-     style="display:inline;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:5.96981;stroke-linecap:round;stroke-linejoin:round;paint-order:fill markers stroke"
+     style="display:inline;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:6.36375;stroke-linecap:round;stroke-linejoin:round;paint-order:fill markers stroke"
      id="rect19"
-     width="48"
-     height="15.278092"
-     x="-55.480999"
-     y="10.068153"
-     sodipodi:type="rect"
-     transform="rotate(-90)" />
-  <rect
-     style="display:inline;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:6.08907;stroke-linecap:round;stroke-linejoin:round;paint-order:fill markers stroke"
-     id="rect20"
-     width="48"
-     height="10.117188"
-     x="-48.060547"
+     width="50"
+     height="16.66655"
+     x="-50"
      y="0"
      sodipodi:type="rect"
      transform="rotate(-90)" />
-  <path
-     id="rect14"
-     style="fill:#808080;fill-rule:evenodd;stroke-width:9;stroke-linecap:round;stroke-linejoin:round;paint-order:fill markers stroke"
-     d="m 0,48.060547 v 7.419922 44.523441 H 88.195312 100 V 92.583984 H 88.195312 V 85.162109 H 72.917969 V 77.742188 H 57.638672 V 70.322266 H 42.361328 V 62.902344 H 27.083984 V 55.480469 H 11.804688 v -7.419922 z" />
+  <rect
+     style="display:inline;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:6.36375;stroke-linecap:round;stroke-linejoin:round;paint-order:fill markers stroke"
+     id="rect19-7"
+     width="50"
+     height="16.66655"
+     x="-60"
+     y="16.66655"
+     sodipodi:type="rect"
+     transform="rotate(-90)" />
+  <rect
+     style="display:inline;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:6.36375;stroke-linecap:round;stroke-linejoin:round;paint-order:fill markers stroke"
+     id="rect19-7-0"
+     width="50"
+     height="16.66655"
+     x="-70"
+     y="33.333099"
+     sodipodi:type="rect"
+     transform="rotate(-90)" />
+  <rect
+     style="display:inline;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:6.36375;stroke-linecap:round;stroke-linejoin:round;paint-order:fill markers stroke"
+     id="rect19-7-0-4"
+     width="50"
+     height="16.66655"
+     x="-80"
+     y="49.999649"
+     sodipodi:type="rect"
+     transform="rotate(-90)" />
+  <rect
+     style="display:inline;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:6.36375;stroke-linecap:round;stroke-linejoin:round;paint-order:fill markers stroke"
+     id="rect19-7-0-4-5"
+     width="50"
+     height="16.66655"
+     x="-90"
+     y="66.666199"
+     sodipodi:type="rect"
+     transform="rotate(-90)" />
+  <rect
+     style="display:inline;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:6.36375;stroke-linecap:round;stroke-linejoin:round;paint-order:fill markers stroke"
+     id="rect19-7-0-4-5-2"
+     width="50"
+     height="16.66655"
+     x="-100"
+     y="83.33345"
+     sodipodi:type="rect"
+     transform="rotate(-90)" />
 </svg>
