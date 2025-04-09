@@ -16,12 +16,12 @@ public class PlayerController : MonoBehaviour
         Vector2 movement = new Vector2(Horizontal, Vertical);
         movement = Vector2.ClampMagnitude(movement, 1);
         rigidbody.linearVelocity = movement * speed;
-        if (Input.GetKeyDown(KeyCode.Space)){
+        if (Input.GetButtonDown("Jump")){
             Vector3 Dir = movement.normalized * 3;
-            Data node = Physics2D.OverlapPoint(transform.position + Dir, dataLayer).GetComponent<Info>();
+            Collider2D node = Physics2D.OverlapPoint(transform.position + Dir, dataLayer);
             if (node == null)
                 return;
-            if (data.height != node.height)
+            if (data.height != node.GetComponent<Info>().height)
                 return;
             transform.position += Dir;
         }
