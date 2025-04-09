@@ -168,7 +168,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rigidbody: {fileID: 5776620025045687123}
-  speed: 1500
+  data: {fileID: 6571714504594615148}
+  dataLayer:
+    serializedVersion: 2
+    m_Bits: 64
+  speed: 10
 --- !u!114 &6571714504594615148
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -181,3 +185,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2397d9482da3d304385d29b712d4b9ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  height: 0
+  stairAngle: 0
+  isStair: 0
