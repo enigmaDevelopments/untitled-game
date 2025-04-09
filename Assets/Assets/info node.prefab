@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 7729012762806478718}
   - component: {fileID: 6256445395903331129}
   - component: {fileID: 9191020865497606623}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: info node
-  m_TagString: Player
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -97,4 +97,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   height: 0
+  stairAngle: 0
   isStair: 0
