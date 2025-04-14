@@ -479,7 +479,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9191020865497606623, guid: 145c95ca6e0abf842a92db63e2e32589, type: 3}
       propertyPath: isStair
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
