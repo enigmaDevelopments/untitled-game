@@ -1,4 +1,3 @@
-using UnityEditor;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
@@ -7,7 +6,7 @@ public class PlayerController : MonoBehaviour
     public Data data;
     public LayerMask dataLayer;
     public float speed = 5f;
-    
+
 
     void Update()
     {
@@ -16,14 +15,16 @@ public class PlayerController : MonoBehaviour
         Vector2 movement = new Vector2(Horizontal, Vertical);
         movement = Vector2.ClampMagnitude(movement, 1);
         rigidbody.linearVelocity = movement * speed;
-        if (Input.GetButtonDown("Jump")){
-            Vector3 Dir = movement.normalized * 3;
-            Collider2D node = Physics2D.OverlapPoint(transform.position + Dir, dataLayer);
+        if (Input.GetButtonDown("Jump")) {
+            Vector2 pos = transform.position + (Vector3)(movement.normalized * 3);
+            pos = new Vector2(Mathf.Floor(pos.x) + .5f, Mathf.Floor(pos.y) + .5f);
+            Collider2D node = Physics2D.OverlapPoint(pos, dataLayer);
             if (node == null)
                 return;
-            if (data.height != node.GetComponent<Info>().height)
+            Data info = node.GetComponent<Info>();
+            if (data.height != info.height||data.isStair||info.isStair)
                 return;
-            transform.position += Dir;
+            transform.position = pos;
         }
     }
 }
