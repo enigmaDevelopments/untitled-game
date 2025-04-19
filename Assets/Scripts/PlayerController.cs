@@ -3,10 +3,10 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     public Rigidbody2D rigidbody;
+    public Animator animator;
     public Data data;
     public LayerMask dataLayer;
     public float speed = 5f;
-
 
     void Update()
     {
@@ -15,6 +15,19 @@ public class PlayerController : MonoBehaviour
         Vector2 movement = new Vector2(Horizontal, Vertical);
         movement = Vector2.ClampMagnitude(movement, 1);
         rigidbody.linearVelocity = movement * speed;
+        
+        animator.SetFloat("x", movement.x);
+        animator.SetFloat("y", movement.y);
+        if (movement != Vector2.zero)
+        {
+            animator.SetFloat("lastX", movement.x);
+            animator.SetFloat("lastY", movement.y);
+            animator.SetBool("isMoving", true);
+        }
+        else
+            animator.SetBool("isMoving", false);
+        animator.SetFloat("speed", movement.magnitude * 15f);
+
         if (Input.GetButtonDown("Jump")) {
             Vector2 pos = transform.position + (Vector3)(movement.normalized * 3);
             pos.y -= .5f;
@@ -30,3 +43,4 @@ public class PlayerController : MonoBehaviour
         }
     }
 }
+
