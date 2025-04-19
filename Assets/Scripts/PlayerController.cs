@@ -22,6 +22,7 @@ public class PlayerController : MonoBehaviour
         }
         else
             animator.SetBool("isMoving", false);
+        animator.SetFloat("speed", movement.magnitude * 15f);
     }
 }
 
