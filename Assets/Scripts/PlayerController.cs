@@ -18,7 +18,10 @@ public class PlayerController : MonoBehaviour
         {
             animator.SetFloat("lastX", movement.x);
             animator.SetFloat("lastY", movement.y);
+            animator.SetBool("isMoving", true);
         }
+        else
+            animator.SetBool("isMoving", false);
     }
 }
 

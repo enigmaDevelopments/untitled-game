@@ -190,5 +190,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rigidbody: {fileID: 5776620025045687123}
-  animator: {fileID: 0}
+  animator: {fileID: 1340950364397921379}
   speed: 1500
