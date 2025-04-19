@@ -192,12 +192,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rigidbody: {fileID: 5776620025045687123}
   animator: {fileID: 1340950364397921379}
-  speed: 1500
   data: {fileID: 6571714504594615148}
   dataLayer:
     serializedVersion: 2
     m_Bits: 64
-  speed: 10
+  speed: 5
 --- !u!114 &6571714504594615148
 MonoBehaviour:
   m_ObjectHideFlags: 0
