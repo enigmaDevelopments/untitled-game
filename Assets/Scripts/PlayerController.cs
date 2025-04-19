@@ -7,6 +7,7 @@ public class PlayerController : MonoBehaviour
     public Data data;
     public LayerMask dataLayer;
     public float speed = 5f;
+    public Vector2 lastMovmenmt = Vector2.zero;
 
     void Update()
     {
@@ -20,16 +21,17 @@ public class PlayerController : MonoBehaviour
         animator.SetFloat("y", movement.y);
         if (movement != Vector2.zero)
         {
-            animator.SetFloat("lastX", movement.x);
-            animator.SetFloat("lastY", movement.y);
+            lastMovmenmt = movement;
             animator.SetBool("isMoving", true);
         }
         else
             animator.SetBool("isMoving", false);
+        animator.SetFloat("lastX", lastMovmenmt.x);
+        animator.SetFloat("lastY", lastMovmenmt.y);
         animator.SetFloat("speed", movement.magnitude * 15f);
 
         if (Input.GetButtonDown("Jump")) {
-            Vector2 pos = transform.position + (Vector3)(movement.normalized * 3);
+            Vector2 pos = transform.position + (Vector3)(lastMovmenmt.normalized * 3);
             pos = new Vector2(Mathf.Floor(pos.x) + .5f, Mathf.Floor(pos.y) +.5f);
             Collider2D node = Physics2D.OverlapPoint(pos, dataLayer);
             if (node == null)
