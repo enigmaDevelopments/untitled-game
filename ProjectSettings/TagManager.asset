@@ -56,6 +56,21 @@ TagManager:
   - name: decor
     uniqueID: 3706482501
     locked: 0
+  - name: floor-hidden
+    uniqueID: 4120038135
+    locked: 0
+  - name: walk in front-hidden
+    uniqueID: 173181291
+    locked: 0
+  - name: collition-hidden
+    uniqueID: 1589030537
+    locked: 0
+  - name: walk behind-hidden
+    uniqueID: 1402855625
+    locked: 0
+  - name: decor-hidden
+    uniqueID: 1270685827
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
