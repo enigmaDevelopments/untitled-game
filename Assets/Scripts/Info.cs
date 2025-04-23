@@ -6,9 +6,7 @@ public class Info : Data
     {
         if (collision.CompareTag("Player"))
         {
-            Data player = collision.GetComponent<Data>();
-            player.isStair = isStair;
-            player.height = height;
+            collision.GetComponent<Data>().CopyTo(this);
         }
     }
 }
