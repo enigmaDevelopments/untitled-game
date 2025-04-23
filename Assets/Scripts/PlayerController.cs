@@ -31,15 +31,21 @@ public class PlayerController : MonoBehaviour
         animator.SetFloat("speed", movement.magnitude * 15f);
 
         if (Input.GetButtonDown("Jump")) {
+            if (data.isStair)
+                return;
             Vector2 pos = transform.position + (Vector3)(lastMovmenmt.normalized * 3);
             pos = new Vector2(Mathf.Floor(pos.x) + .5f, Mathf.Floor(pos.y) +.5f);
-            Collider2D node = Physics2D.OverlapPoint(pos, dataLayer);
-            if (node == null)
+            Collider2D[] nodes = Physics2D.OverlapPointAll(pos, dataLayer);
+            if (nodes == null)
                 return;
-            Data info = node.GetComponent<Info>();
-            if (data.height != info.height||data.isStair||info.isStair)
-                return;
-            transform.position = pos;
+            foreach (Collider2D node in nodes)
+            {
+                Data info = node.GetComponent<Info>();
+                if (info.isStair || data.height != info.height)
+                    continue;
+                transform.position = pos;
+                break;
+            }
         }
     }
 }
