@@ -1,22 +1,24 @@
+using UnityEditor.PackageManager;
 using UnityEngine;
 
 public class Hidden : MonoBehaviour
 {
-    public GameObject draw;
     public Data data;
+    private GridInfo grids;
     void Start()
     {
-        draw.SetActive(false);
+        grids = transform.parent.GetComponent<GridInfo>();
+        grids.draw.SetActive(false);
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
             if (data.height == collision.GetComponent<Data>().height)
-                draw.SetActive(true);
+                grids.draw.SetActive(true);
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
-            draw.SetActive(false);
+            grids.draw.SetActive(false);
     }
 }
