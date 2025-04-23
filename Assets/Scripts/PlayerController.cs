@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    public Rigidbody2D rigidbody;
+    public Rigidbody2D rb;
     public Animator animator;
     public Data data;
     public LayerMask dataLayer;
@@ -15,7 +15,7 @@ public class PlayerController : MonoBehaviour
         float Vertical = Input.GetAxisRaw("Vertical");
         Vector2 movement = new Vector2(Horizontal, Vertical);
         movement = Vector2.ClampMagnitude(movement, 1);
-        rigidbody.linearVelocity = movement * speed;
+        rb.linearVelocity = movement * speed;
         
         animator.SetFloat("x", movement.x);
         animator.SetFloat("y", movement.y);
