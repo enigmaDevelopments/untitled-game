@@ -17,16 +17,18 @@ public class Hidden : MonoBehaviour
             {
                 grids.draw.SetActive(true);
                 Collition(false);
-                Debug.Log(data.height);
+                collision.GetComponent<SpriteRenderer>().sortingLayerName = "player-hidden";
                 StartCoroutine(ResetData(collision.GetComponent<Data>()));
-                Debug.Log(collision.GetComponent<Data>().height);
             }
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
+        {
             grids.draw.SetActive(false);
             Collition(true);
+            collision.GetComponent<SpriteRenderer>().sortingLayerName = "player";
+        }
     }
     private void Collition (bool set)
     {
@@ -41,6 +43,5 @@ public class Hidden : MonoBehaviour
     {
         yield return new WaitForEndOfFrame();
         player.CopyTo(data);
-        Debug.Log(player.height);
     }
 }
