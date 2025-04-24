@@ -119,25 +119,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &90591119 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1472194639356445791, guid: d813dbe28ca80a94690962f058479f4f, type: 3}
-  m_PrefabInstance: {fileID: 1331362474}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &90591121
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 90591119}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 07ae553d31d70954da2571dde653ef6d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  draw: {fileID: 1398173696}
-  Main: {fileID: 1946537322}
 --- !u!1 &619394800
 GameObject:
   m_ObjectHideFlags: 0
@@ -175,7 +156,7 @@ MonoBehaviour:
   m_Intensity: 1
   m_LightVolumeIntensity: 1
   m_LightVolumeEnabled: 0
-  m_ApplyToSortingLayers: 000000007df3184a3fe9597fddba28b647d0cd7c8fbb2db9456fecdcf7ca92f56b89520a89aeb65ec9e09d538320bd4b
+  m_ApplyToSortingLayers: 000000007df3184a3fe9597fddba28b647d0cd7c8fbb2db9456fecdcf7ca92f56b89520a89aeb65ec9e09d538320bd4b0b8120e4
   m_LightCookieSprite: {fileID: 0}
   m_DeprecatedPointLightCookieSprite: {fileID: 0}
   m_LightOrder: 0
@@ -623,6 +604,14 @@ PrefabInstance:
       propertyPath: m_Tiles.Array.data[2].second.m_TileObjectToInstantiateIndex
       value: 65535
       objectReference: {fileID: 0}
+    - target: {fileID: 8678842970072006208, guid: d813dbe28ca80a94690962f058479f4f, type: 3}
+      propertyPath: Main
+      value: 
+      objectReference: {fileID: 1946537322}
+    - target: {fileID: 8678842970072006208, guid: d813dbe28ca80a94690962f058479f4f, type: 3}
+      propertyPath: main
+      value: 
+      objectReference: {fileID: 1946537322}
     - target: {fileID: 8887263138948711290, guid: d813dbe28ca80a94690962f058479f4f, type: 3}
       propertyPath: m_CompositePaths.m_Paths.Array.size
       value: 1
@@ -738,16 +727,8 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 1472194639356445791, guid: d813dbe28ca80a94690962f058479f4f, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 90591121}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d813dbe28ca80a94690962f058479f4f, type: 3}
---- !u!1 &1398173696 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6180004515400493668, guid: d813dbe28ca80a94690962f058479f4f, type: 3}
-  m_PrefabInstance: {fileID: 1331362474}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1760194775
 PrefabInstance:
   m_ObjectHideFlags: 0

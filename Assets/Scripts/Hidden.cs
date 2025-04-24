@@ -18,6 +18,7 @@ public class Hidden : MonoBehaviour
                 grids.draw.SetActive(true);
                 Collition(false);
                 collision.GetComponent<SpriteRenderer>().sortingLayerName = "player-hidden";
+                grids.active = true;
                 StartCoroutine(ResetData(collision.GetComponent<Data>()));
             }
     }
@@ -28,6 +29,7 @@ public class Hidden : MonoBehaviour
             grids.draw.SetActive(false);
             Collition(true);
             collision.GetComponent<SpriteRenderer>().sortingLayerName = "player";
+            grids.active = false;
         }
     }
     private void Collition (bool set)

@@ -65,6 +65,9 @@ TagManager:
   - name: collition-hidden
     uniqueID: 1589030537
     locked: 0
+  - name: player-hidden
+    uniqueID: 3827335435
+    locked: 0
   - name: walk behind-hidden
     uniqueID: 1402855625
     locked: 0
