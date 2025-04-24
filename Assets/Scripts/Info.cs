@@ -1,4 +1,6 @@
 using UnityEngine;
+using System.Collections;
+
 
 public class Info : Data
 {
@@ -12,7 +14,15 @@ public class Info : Data
     {
         if (collision.CompareTag("Player") && grid.active)
         {
-            collision.GetComponent<Data>().CopyTo(this);
+            StartCoroutine(SetData(collision));
         }
+    }
+    private IEnumerator SetData(Collider2D player)
+    {
+        yield return new WaitUntil(() => PlayerController.active);
+        if (GetComponent<Collider2D>().IsTouching(player))
+            player.GetComponent<Data>().CopyTo(this);
+        yield return new WaitForEndOfFrame();
+        PlayerController.active = false;
     }
 }
