@@ -1,4 +1,5 @@
 using UnityEngine;
+using static UnityEditor.PlayerSettings;
 
 public class PlayerController : MonoBehaviour
 {
@@ -7,7 +8,13 @@ public class PlayerController : MonoBehaviour
     public Data data;
     public LayerMask dataLayer;
     public float speed = 5f;
-    public Vector2 lastMovmenmt = Vector2.zero;
+    public static bool active = false;
+    private Vector2 lastMovmenmt = Vector2.zero;
+
+    private void Start()
+    {
+        data.CopyTo(Physics2D.OverlapPoint(transform.position, dataLayer).GetComponent<Info>());
+    }
 
     void Update()
     {
@@ -47,6 +54,10 @@ public class PlayerController : MonoBehaviour
                 break;
             }
         }
+    }
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        active = true;
     }
 }
 
