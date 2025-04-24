@@ -12,28 +12,26 @@ public class Hidden : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        Debug.Log("OnTriggerEnter2D");
         if (collision.gameObject.CompareTag("Player"))
-            if (data.height == collision.GetComponent<Data>().height)
+            if (data.height == collision.GetComponent<Data>().height || grids.active)
             {
-                grids.draw.SetActive(true);
-                Collition(false);
-                collision.GetComponent<SpriteRenderer>().sortingLayerName = "player-hidden";
-                grids.active = true;
-                StartCoroutine(ResetData(collision.GetComponent<Data>()));
+                Activate(collision.GetComponent<SpriteRenderer>());
+                StartCoroutine(Wait(collision));
             }
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            grids.draw.SetActive(false);
             Collition(true);
             collision.GetComponent<SpriteRenderer>().sortingLayerName = "player";
-            grids.active = false;
         }
     }
     private void Collition (bool set)
     {
+        grids.draw.SetActive(!set);
+        grids.active = !set;
         foreach (Transform child in grids.main.transform)
         {
             Collider2D[] grandchildern = child.GetComponentsInChildren<Collider2D>();
@@ -41,9 +39,17 @@ public class Hidden : MonoBehaviour
                 grandchild.enabled = set;
         }
     }
-    private IEnumerator ResetData(Data player)
+    private void Activate(SpriteRenderer player)
     {
-        yield return new WaitForEndOfFrame();
-        player.CopyTo(data);
+        Collition(false);
+        player.sortingLayerName = "player-hidden";
+    }
+    private IEnumerator Wait(Collider2D player)
+    {
+        yield return new WaitUntil(() => PlayerController.active);
+        if (GetComponent<Collider2D>().IsTouching(player))
+        {
+            Activate(player.GetComponent<SpriteRenderer>());
+        }
     }
 }
