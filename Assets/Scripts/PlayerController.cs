@@ -8,8 +8,11 @@ public class PlayerController : MonoBehaviour
     public Data data;
     public LayerMask dataLayer;
     public float speed = 5f;
+    public float boxSpeed = 1f;
+    public bool pushingBox = false;
     public static bool active = false;
     private Vector2 lastMovmenmt = Vector2.zero;
+    private float currentSpeed;
 
     private void Start()
     {
@@ -18,11 +21,13 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
+        currentSpeed = pushingBox? boxSpeed : speed;
         float Horizontal = Input.GetAxisRaw("Horizontal");
         float Vertical = Input.GetAxisRaw("Vertical");
         Vector2 movement = new Vector2(Horizontal, Vertical);
         movement = Vector2.ClampMagnitude(movement, 1);
-        rb.linearVelocity = movement * speed;
+        movement *= currentSpeed;
+        rb.linearVelocity = movement;
         
         animator.SetFloat("x", movement.x);
         animator.SetFloat("y", movement.y);
@@ -35,7 +40,7 @@ public class PlayerController : MonoBehaviour
             animator.SetBool("isMoving", false);
         animator.SetFloat("lastX", lastMovmenmt.x);
         animator.SetFloat("lastY", lastMovmenmt.y);
-        animator.SetFloat("speed", movement.magnitude * 15f);
+        animator.SetFloat("speed", movement.magnitude * 6f);
 
         if (Input.GetButtonDown("Jump")) {
             if (data.isStair)

@@ -7,6 +7,7 @@ public class StopBox : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
+            collision.gameObject.GetComponent<PlayerController>().pushingBox = false;
             rb.constraints = RigidbodyConstraints2D.FreezeAll;
         }
     }
@@ -14,6 +15,7 @@ public class StopBox : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
+            collision.gameObject.GetComponent<PlayerController>().pushingBox = true;
             rb.constraints = RigidbodyConstraints2D.FreezeRotation;
         }
     }
