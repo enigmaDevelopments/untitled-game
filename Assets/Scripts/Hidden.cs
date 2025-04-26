@@ -12,7 +12,6 @@ public class Hidden : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("OnTriggerEnter2D");
         if (collision.gameObject.CompareTag("Player"))
             if (data.height == collision.GetComponent<Data>().height || grids.active)
             {
