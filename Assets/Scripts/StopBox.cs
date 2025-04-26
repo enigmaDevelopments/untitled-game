@@ -2,16 +2,13 @@ using UnityEngine;
 
 public class StopBox : MonoBehaviour
 {
+    public Rigidbody2D rb;
+    public SpriteRenderer spriteRenderer;
     public bool hidden = false;
-    private Rigidbody2D rb;
-    private SpriteRenderer spriteRenderer;
     private Transform player;
     private PlayerController playerController;
     private void Start()
     {
-
-        rb = GetComponent<Rigidbody2D>();
-        spriteRenderer = GetComponent<SpriteRenderer>();
         player = GameObject.FindGameObjectWithTag("Player").transform;
         playerController = player.GetComponent<PlayerController>();
     }
