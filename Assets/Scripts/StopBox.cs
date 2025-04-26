@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class StopBox : MonoBehaviour
 {
+    public bool hidden = false;
     private Rigidbody2D rb;
     private SpriteRenderer spriteRenderer;
     private Transform player;
@@ -15,7 +16,7 @@ public class StopBox : MonoBehaviour
     }
     private void Update()
     {
-        spriteRenderer.sortingLayerName = player.position.y < transform.position.y ? "collition": "walk behind";
+        spriteRenderer.sortingLayerName = (player.position.y < transform.position.y ? "collition" : "walk behind") + (hidden ? "-hidden" : "");
     }
     private void OnCollisionExit2D(Collision2D collision)
     {
