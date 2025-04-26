@@ -48,10 +48,9 @@ public class PlayerController : MonoBehaviour
             Vector2 pos = transform.position + (Vector3)(lastMovmenmt.normalized * 3);
             pos = new Vector2(Mathf.Floor(pos.x) + .5f, Mathf.Floor(pos.y) +.5f);
             Collider2D[] nodes = Physics2D.OverlapPointAll(pos, dataLayer);
-            if (nodes == null)
-                return;
             foreach (Collider2D node in nodes)
             {
+                Debug.Log(node.gameObject);
                 Data info = node.GetComponent<Info>();
                 if (info.isStair || data.height != info.height)
                     continue;
