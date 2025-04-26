@@ -121,7 +121,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 7097400859406517036}
   spriteRenderer: {fileID: 6830277174378659856}
-  data: {fileID: 3403778360645300188}
+  data: {fileID: 7768125689874820503}
   hidden: 0
 --- !u!1 &6991078592505659840
 GameObject:
@@ -133,7 +133,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2494853571697684882}
   - component: {fileID: 5331684367810220720}
-  - component: {fileID: 3403778360645300188}
+  - component: {fileID: 7768125689874820503}
   m_Layer: 6
   m_Name: top
   m_TagString: Untagged
@@ -202,7 +202,7 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &3403778360645300188
+--- !u!114 &7768125689874820503
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -211,13 +211,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 6991078592505659840}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 44000dcdf3d454a48a3f39c4bed8741b, type: 3}
+  m_Script: {fileID: 11500000, guid: 2397d9482da3d304385d29b712d4b9ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   height: 0
   stairAngle: 0
   isStair: 0
-  grid: {fileID: 0}
 --- !u!1001 &5478798197485401129
 PrefabInstance:
   m_ObjectHideFlags: 0

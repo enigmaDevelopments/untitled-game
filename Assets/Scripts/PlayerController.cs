@@ -49,7 +49,7 @@ public class PlayerController : MonoBehaviour
             Collider2D[] nodes = Physics2D.OverlapPointAll(pos, dataLayer);
             foreach (Collider2D node in nodes)
             {
-                Data info = node.GetComponent<Info>();
+                Data info = node.GetComponent<Data>();
                 if (info.isStair || data.height != info.height)
                     continue;
                 transform.position = pos;
