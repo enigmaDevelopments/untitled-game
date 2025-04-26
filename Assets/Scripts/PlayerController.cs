@@ -1,5 +1,4 @@
 using UnityEngine;
-using static UnityEditor.PlayerSettings;
 
 public class PlayerController : MonoBehaviour
 {
@@ -50,7 +49,6 @@ public class PlayerController : MonoBehaviour
             Collider2D[] nodes = Physics2D.OverlapPointAll(pos, dataLayer);
             foreach (Collider2D node in nodes)
             {
-                Debug.Log(node.gameObject);
                 Data info = node.GetComponent<Info>();
                 if (info.isStair || data.height != info.height)
                     continue;
