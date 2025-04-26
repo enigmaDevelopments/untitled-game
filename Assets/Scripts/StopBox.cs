@@ -6,11 +6,16 @@ public class StopBox : MonoBehaviour
     public SpriteRenderer spriteRenderer;
     public Data data;
     public bool hidden = false;
+    private Transform topCollition;
     private Transform player;
     private PlayerController playerController;
     private Data playerData;
     private void Start()
     {
+        topCollition = Instantiate(transform.parent.gameObject).transform;
+        Destroy(topCollition.GetComponent<SpriteRenderer>());
+        foreach (Transform child in topCollition.transform)
+            Destroy(child.gameObject);
         player = GameObject.FindGameObjectWithTag("Player").transform;
         playerController = player.GetComponent<PlayerController>();
         playerData = player.GetComponent<Data>();
@@ -23,6 +28,7 @@ public class StopBox : MonoBehaviour
     {
         transform.parent.position = transform.position;
         transform.localPosition = Vector2.zero;
+        topCollition.position = transform.position;
     }
     private void OnCollisionExit2D(Collision2D collision)
     {
