@@ -13,7 +13,9 @@ public class TileCopier : MonoBehaviour
         newLayer.gameObject.layer = layer;
         foreach (Transform child in newLayer)
         {
-            child.GetComponent<CompositeCollider2D>().isTrigger = false;
+            CompositeCollider2D compositeCollider = child.GetComponent<CompositeCollider2D>();
+            compositeCollider.geometryType = 0;
+            compositeCollider.isTrigger = false;
             child.GetComponent<TilemapCollider2D>().enabled = false;
             child.gameObject.layer = layer;
         }
