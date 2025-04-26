@@ -17,7 +17,7 @@ public class StopBox : MonoBehaviour
     }
     private void Update()
     {
-        spriteRenderer.sortingLayerName = (player.position.y < transform.position.y ? "collition" : "walk behind") + (hidden ? "-hidden" : "");
+        spriteRenderer.sortingLayerName = (player.position.y < transform.position.y-.05f ? "collition" : "walk behind") + (hidden ? "-hidden" : "");
     }
     private void FixedUpdate()
     {
