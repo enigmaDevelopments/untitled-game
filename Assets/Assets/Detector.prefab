@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 3198276691598564114}
   - component: {fileID: 764202965206167846}
   - component: {fileID: -8213511947509472506}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Detector
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -192,7 +192,7 @@ CompositeCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_GeometryType: 1
+  m_GeometryType: 0
   m_GenerationType: 0
   m_EdgeRadius: 0
   m_ColliderPaths:
