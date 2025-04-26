@@ -9,6 +9,7 @@ public class StopBox : MonoBehaviour
     private PlayerController playerController;
     private void Start()
     {
+
         rb = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         player = GameObject.FindGameObjectWithTag("Player").transform;
@@ -17,6 +18,11 @@ public class StopBox : MonoBehaviour
     private void Update()
     {
         spriteRenderer.sortingLayerName = (player.position.y < transform.position.y ? "collition" : "walk behind") + (hidden ? "-hidden" : "");
+    }
+    private void FixedUpdate()
+    {
+        transform.parent.position = transform.position;
+        transform.localPosition = Vector2.zero;
     }
     private void OnCollisionExit2D(Collision2D collision)
     {
