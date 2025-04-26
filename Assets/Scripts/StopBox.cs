@@ -2,12 +2,26 @@ using UnityEngine;
 
 public class StopBox : MonoBehaviour
 {
-    public Rigidbody2D rb;
+    private Rigidbody2D rb;
+    private SpriteRenderer spriteRenderer;
+    private Transform player;
+    private PlayerController playerController;
+    private void Start()
+    {
+        rb = GetComponent<Rigidbody2D>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        player = GameObject.FindGameObjectWithTag("Player").transform;
+        playerController = player.GetComponent<PlayerController>();
+    }
+    private void Update()
+    {
+        spriteRenderer.sortingLayerName = player.position.y < transform.position.y ? "collition": "walk behind";
+    }
     private void OnCollisionExit2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            collision.gameObject.GetComponent<PlayerController>().pushingBox = false;
+            playerController.pushingBox = false;
             rb.constraints = RigidbodyConstraints2D.FreezeAll;
         }
     }
@@ -15,7 +29,7 @@ public class StopBox : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            collision.gameObject.GetComponent<PlayerController>().pushingBox = true;
+            playerController.pushingBox = true;
             rb.constraints = RigidbodyConstraints2D.FreezeRotation;
         }
     }
