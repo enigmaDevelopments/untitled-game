@@ -49,7 +49,7 @@ public class StopBox : MonoBehaviour
     }
     private void OnCollisionExit2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Player"))
+        if (collision.gameObject.CompareTag("Player") || collision.gameObject.CompareTag("box"))
         {
             playerController.pushingBox = false;
             rb.constraints = RigidbodyConstraints2D.FreezeAll;
@@ -57,7 +57,7 @@ public class StopBox : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Player"))
+        if (collision.gameObject.CompareTag("Player") || collision.gameObject.CompareTag("box"))
         {
             playerController.pushingBox = true;
             rb.constraints = RigidbodyConstraints2D.FreezeRotation;
