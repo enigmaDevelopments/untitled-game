@@ -38,6 +38,40 @@
   <defs
      id="defs4787">
     <inkscape:path-effect
+       effect="fillet_chamfer"
+       id="path-effect5"
+       is_visible="true"
+       lpeversion="1"
+       nodesatellites_param="F,0,0,1,0,15,0,1 @ F,0,0,1,0,15,0,1 @ F,0,0,1,0,15,0,1 @ F,0,0,1,0,15,0,1"
+       radius="15"
+       unit="px"
+       method="auto"
+       mode="F"
+       chamfer_steps="1"
+       flexible="false"
+       use_knot_distance="true"
+       apply_no_radius="true"
+       apply_with_radius="true"
+       only_selected="false"
+       hide_knots="false" />
+    <inkscape:path-effect
+       effect="fillet_chamfer"
+       id="path-effect1"
+       is_visible="true"
+       lpeversion="1"
+       nodesatellites_param="F,0,0,1,0,15,0,1 @ F,0,0,1,0,15,0,1 @ F,0,0,1,0,15,0,1 @ F,0,0,1,0,15,0,1"
+       radius="15"
+       unit="px"
+       method="auto"
+       mode="F"
+       chamfer_steps="1"
+       flexible="false"
+       use_knot_distance="true"
+       apply_no_radius="true"
+       apply_with_radius="true"
+       only_selected="false"
+       hide_knots="false" />
+    <inkscape:path-effect
        effect="tiling"
        id="path-effect8"
        is_visible="true"
@@ -138,6 +172,13 @@
        only_selected="false"
        hide_knots="false" />
   </defs>
+  <rect
+     style="display:inline;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.547568;stroke-linecap:round;stroke-linejoin:round;paint-order:fill markers stroke"
+     id="rect3"
+     width="100.00001"
+     height="29.982933"
+     x="0"
+     y="85.008545" />
   <g
      id="g17"
      inkscape:label="Base"
@@ -152,11 +193,12 @@
        y="0"
        transform="translate(-2.3706055e-6)"
        sodipodi:type="rect"
-       d="M 0,0 H 100 V 100 H 0 Z M 100,100 V 200 H 0 V 100 Z" />
+       d="m 15,0 h 70 c 8.284271,0 15,6.7157288 15,15 v 70 c 0,8.284271 -6.715729,15 -15,15 H 15 C 6.7157288,100 0,93.284271 0,85 V 15 C 0,6.7157288 6.7157288,0 15,0 Z m 70,100 c 8.284271,0 15,6.71573 15,15 v 70 c 0,8.28427 -6.715729,15 -15,15 H 15 C 6.7157288,200 0,193.28427 0,185 v -70 c 0,-8.28427 6.7157288,-15 15,-15 z"
+       inkscape:path-effect="#path-effect1" />
     <path
        id="rect2"
        style="display:inline;fill:#80461b;fill-rule:evenodd;stroke-width:9.05188;stroke-linecap:round;stroke-linejoin:round;paint-order:fill markers stroke"
-       d="m 18.500004,5.0000014 h 63 c 7.455844,0 13.5,6.0441556 13.5,13.4999996 v 63 c 0,7.455844 -6.044156,13.5 -13.5,13.5 h -63 c -7.455844,0 -13.5000002,-6.044156 -13.5000002,-13.5 v -63 C 5.000004,11.044157 11.04416,5.0000013 18.500004,5.0000014 Z M 81.499991,105 c 7.455844,0 13.5,6.04416 13.5,13.5 v 63 c 0,7.45585 -6.044156,13.5 -13.5,13.5 h -63 C 11.044147,195 4.9999913,188.95585 4.9999913,181.5 v -63 c 2e-7,-7.45584 6.0441557,-13.5 13.4999997,-13.5 z"
+       d="m 18.500004,5.0000014 h 63 c 7.455844,0 13.5,6.0441556 13.5,13.4999996 l 0,63 c 0,7.455844 -6.044156,13.5 -13.5,13.5 h -63 c -7.455844,0 -13.5000002,-6.044156 -13.5000002,-13.5 v -63 c 0,-7.455844 6.0441562,-13.4999996 13.5000002,-13.4999996 z M 81.499991,105 c 7.455845,0 13.5,6.04416 13.5,13.5 v 63 c 0,7.45585 -6.044155,13.5 -13.499999,13.5 H 18.499991 C 11.044147,195 4.9999913,188.95585 4.9999913,181.5 l 0,-63 c 0,-7.45584 6.0441557,-13.5 13.4999997,-13.5 z"
        inkscape:path-effect="#path-effect4"
        inkscape:original-d="M 5.0000038,5.0000014 H 95.000004 V 95.000001 H 5.0000038 Z" />
     <g
@@ -359,11 +401,12 @@
     </g>
   </g>
   <rect
-     style="display:inline;fill:#000000;fill-opacity:0.501779;fill-rule:evenodd;stroke:none;stroke-width:9;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1;paint-order:fill markers stroke"
+     style="display:inline;fill:#000000;fill-opacity:0.501779;fill-rule:evenodd;stroke:none;stroke-width:8.1;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1;paint-order:fill markers stroke"
      id="rect1"
-     width="100.00001"
-     height="100.00001"
-     x="0"
-     y="100.00001"
-     inkscape:label="rect1" />
+     width="90"
+     height="90"
+     x="4.9999895"
+     y="105"
+     inkscape:label="rect1"
+     sodipodi:type="rect" />
 </svg>
