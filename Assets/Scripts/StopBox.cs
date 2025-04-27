@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections;
 
 public class StopBox : MonoBehaviour
 {
@@ -18,17 +19,10 @@ public class StopBox : MonoBehaviour
     {
         if (grids == null)
             grids = transform.parent.parent.parent.GetComponent<GridInfo>();
-        topCollition = Instantiate(transform.parent.gameObject, grids.collition.transform.GetChild(data.height)).transform;
-        Destroy(topCollition.GetComponent<SpriteRenderer>());
-        foreach (Transform child in topCollition.transform)
-            Destroy(child.gameObject);
-        Collider2D topCollider = topCollition.GetComponent<Collider2D>();
-        topCollider.compositeOperation = CompositeCollider2D.CompositeOperation.Merge;
-        topCollider.enabled = true;
         player = GameObject.FindGameObjectWithTag("Player").transform;
         playerController = player.GetComponent<PlayerController>();
         playerData = player.GetComponent<Data>();
-        compositeCollider = grids.draw.GetComponent<CompositeCollider2D>();
+        StartCoroutine(MakeTopCollition());
     }
     private void Update()
     {
@@ -36,6 +30,8 @@ public class StopBox : MonoBehaviour
     }
     private void FixedUpdate()
     {
+        if (compositeCollider == null)
+            return;
         transform.parent.position = transform.position;
         transform.localPosition = Vector2.zero;
         topCollition.position = transform.position;
@@ -78,5 +74,17 @@ public class StopBox : MonoBehaviour
     private void OnTriggerStay2D(Collider2D collision)
     {
         PlayerController.active = false;
+    }
+    private IEnumerator MakeTopCollition()
+    {
+        yield return new WaitForEndOfFrame();
+        topCollition = Instantiate(transform.parent.gameObject, grids.collition.transform.GetChild(data.height)).transform;
+        Destroy(topCollition.GetComponent<SpriteRenderer>());
+        foreach (Transform child in topCollition.transform)
+            Destroy(child.gameObject);
+        Collider2D topCollider = topCollition.GetComponent<Collider2D>();
+        topCollider.compositeOperation = Collider2D.CompositeOperation.Merge;
+        topCollider.enabled = true;
+        compositeCollider = grids.draw.GetComponent<CompositeCollider2D>();
     }
 }
