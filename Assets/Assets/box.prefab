@@ -168,6 +168,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 7097400859406517036}
+  baseCollider: {fileID: 9188458843869483256}
   spriteRenderer: {fileID: 6830277174378659856}
   data: {fileID: 5080258288843509443}
   grids: {fileID: 0}

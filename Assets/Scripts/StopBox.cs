@@ -3,6 +3,7 @@ using UnityEngine;
 public class StopBox : MonoBehaviour
 {
     public Rigidbody2D rb;
+    public Collider2D baseCollider;
     public SpriteRenderer spriteRenderer;
     public Data data;
     public GridInfo grids;
@@ -54,11 +55,17 @@ public class StopBox : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Player") && data.height == playerData.height)
+        {
             topCollition.parent.gameObject.SetActive(true);
+            baseCollider.enabled = false;
+        }
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
+        {
             topCollition.parent.gameObject.SetActive(false);
+            baseCollider.enabled = true;
+        }
     }
 }
