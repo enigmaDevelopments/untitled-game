@@ -68,4 +68,8 @@ public class StopBox : MonoBehaviour
             baseCollider.enabled = true;
         }
     }
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        PlayerController.active = false;
+    }
 }
