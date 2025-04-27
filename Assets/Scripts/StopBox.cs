@@ -5,6 +5,7 @@ public class StopBox : MonoBehaviour
     public Rigidbody2D rb;
     public SpriteRenderer spriteRenderer;
     public Data data;
+    public GridInfo grids;
     public bool hidden = false;
     private Transform topCollition;
     private Transform player;
@@ -12,10 +13,13 @@ public class StopBox : MonoBehaviour
     private Data playerData;
     private void Start()
     {
-        topCollition = Instantiate(transform.parent.gameObject).transform;
+        if (grids == null)
+            grids = transform.parent.parent.parent.GetComponent<GridInfo>();
+        topCollition = Instantiate(transform.parent.gameObject, grids.collition.transform.GetChild(data.height)).transform;
         Destroy(topCollition.GetComponent<SpriteRenderer>());
         foreach (Transform child in topCollition.transform)
             Destroy(child.gameObject);
+        topCollition.GetComponent<Collider2D>().compositeOperation = CompositeCollider2D.CompositeOperation.Merge;
         player = GameObject.FindGameObjectWithTag("Player").transform;
         playerController = player.GetComponent<PlayerController>();
         playerData = player.GetComponent<Data>();
