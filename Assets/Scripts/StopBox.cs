@@ -35,7 +35,9 @@ public class StopBox : MonoBehaviour
         transform.parent.position = transform.position;
         transform.localPosition = Vector2.zero;
         topCollition.position = transform.position;
-        differenceCollider.enabled = playerData.height == data.height;
+        bool playerAbove = playerData.height == data.height;
+        differenceCollider.enabled = playerAbove;
+        baseCollider.enabled = !playerAbove;
         compositeCollider.GenerateGeometry();
     }
     private void OnCollisionExit2D(Collision2D collision)
@@ -60,7 +62,6 @@ public class StopBox : MonoBehaviour
         if (collision.gameObject.CompareTag("Player") && data.height == playerData.height)
         {
             topCollition.parent.gameObject.SetActive(true);
-            baseCollider.enabled = false;
         }
     }
     private void OnTriggerExit2D(Collider2D collision)
@@ -68,12 +69,14 @@ public class StopBox : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             topCollition.parent.gameObject.SetActive(false);
-            baseCollider.enabled = true;
         }
     }
     private void OnTriggerStay2D(Collider2D collision)
     {
-        PlayerController.active = false;
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            PlayerController.active = false;
+        }
     }
     private IEnumerator MakeTopCollition()
     {

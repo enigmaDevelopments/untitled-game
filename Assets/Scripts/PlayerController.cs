@@ -70,6 +70,7 @@ public class PlayerController : MonoBehaviour
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
+        Debug.Log("active");
         active = true;
     }
 }

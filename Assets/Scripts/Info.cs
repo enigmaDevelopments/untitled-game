@@ -18,7 +18,9 @@ public class Info : Data
     }
     private IEnumerator SetData(Collider2D player)
     {
+        Debug.Log("SetData");
         yield return new WaitUntil(() => PlayerController.active);
+        Debug.Log("SetData2");
         if (GetComponent<Collider2D>().IsTouching(player))
             player.GetComponent<Data>().CopyTo(this);
         yield return new WaitForEndOfFrame();
