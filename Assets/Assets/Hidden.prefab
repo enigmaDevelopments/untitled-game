@@ -215,6 +215,7 @@ GameObject:
   - component: {fileID: 3090044519813017823}
   - component: {fileID: 7827931888985378103}
   - component: {fileID: 7412901846068748221}
+  - component: {fileID: 5626543753799090605}
   m_Layer: 8
   m_Name: Box tiles
   m_TagString: Untagged
@@ -455,7 +456,7 @@ CompositeCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_GeometryType: 0
+  m_GeometryType: 1
   m_GenerationType: 0
   m_EdgeRadius: 0
   m_ColliderPaths:
@@ -467,6 +468,18 @@ CompositeCollider2D:
   m_OffsetDistance: 0.00005
   m_UseDelaunayMesh: 0
   m_CompositeGameObject: {fileID: 3120649651318430957}
+--- !u!114 &5626543753799090605
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3120649651318430957}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b37cc60ec91438a489d593ddbf8bb8ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3547149497870327912
 GameObject:
   m_ObjectHideFlags: 0
