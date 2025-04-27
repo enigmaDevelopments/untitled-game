@@ -20,8 +20,10 @@ public class Info : Data
     {
         yield return new WaitUntil(() => PlayerController.active);
         if (GetComponent<Collider2D>().IsTouching(player))
+        {
             player.GetComponent<Data>().CopyTo(this);
-        yield return new WaitForEndOfFrame();
-        PlayerController.active = false;
+            yield return new WaitForEndOfFrame();
+            PlayerController.active = false;
+        }
     }
 }
