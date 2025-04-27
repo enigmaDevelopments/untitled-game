@@ -15,6 +15,7 @@ public class StopBox : MonoBehaviour
     private Transform player;
     private PlayerController playerController;
     private Data playerData;
+    private bool onBox = false;
     private void Start()
     {
         if (grids == null)
@@ -39,6 +40,12 @@ public class StopBox : MonoBehaviour
         differenceCollider.enabled = playerAbove;
         baseCollider.enabled = !playerAbove;
         compositeCollider.GenerateGeometry();
+        if (onBox)
+        {
+            PlayerController.active = false;
+            topCollition.parent.gameObject.SetActive(true);
+            playerData.height = data.height;
+        }
     }
     private void OnCollisionExit2D(Collision2D collision)
     {
@@ -61,6 +68,7 @@ public class StopBox : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player") && data.height == playerData.height)
         {
+            onBox = true;
             topCollition.parent.gameObject.SetActive(true);
         }
     }
@@ -68,14 +76,8 @@ public class StopBox : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
+            onBox = false;
             topCollition.parent.gameObject.SetActive(false);
-        }
-    }
-    private void OnTriggerStay2D(Collider2D collision)
-    {
-        if (collision.gameObject.CompareTag("Player"))
-        {
-            PlayerController.active = false;
         }
     }
     private IEnumerator MakeTopCollition()
