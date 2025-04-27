@@ -10,6 +10,7 @@ public class PlayerController : MonoBehaviour
     public float boxSpeed = 1f;
     public bool pushingBox = false;
     public static bool active = false;
+    public bool active2 = false;
     private Vector2 lastMovmenmt = Vector2.zero;
     private float currentSpeed;
 
@@ -60,6 +61,7 @@ public class PlayerController : MonoBehaviour
     private void OnTriggerExit2D(Collider2D collision)
     {
         active = true;
+        active2 = true;
     }
 }
 

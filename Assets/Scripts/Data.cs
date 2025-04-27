@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class Data : MonoBehaviour
 {
-    public float height;
+    public int height;
     public float stairAngle;
     public bool isStair;
 

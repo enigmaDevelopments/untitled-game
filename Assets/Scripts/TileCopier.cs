@@ -14,10 +14,14 @@ public class TileCopier : MonoBehaviour
         foreach (Transform child in newLayer)
         {
             CompositeCollider2D compositeCollider = child.GetComponent<CompositeCollider2D>();
-            compositeCollider.geometryType = 0;
+            compositeCollider.geometryType = CompositeCollider2D.GeometryType.Outlines;
             compositeCollider.isTrigger = false;
-            child.GetComponent<TilemapCollider2D>().enabled = false;
+            child.gameObject.SetActive(false);
             child.gameObject.layer = layer;
+            Destroy(child.GetComponent<Info>());
+            Hidden hidden = child.GetComponent<Hidden>();
+            if (hidden != null) 
+                Destroy(hidden);
         }
     }
 }
