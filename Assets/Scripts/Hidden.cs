@@ -7,8 +7,7 @@ public class Hidden : MonoBehaviour
     private GridInfo grids;
     void Start()
     {
-        grids = transform.parent.parent.GetComponent<GridInfo>();
-        grids.draw.SetActive(false);
+        StartCoroutine(GetGrids());
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -50,5 +49,11 @@ public class Hidden : MonoBehaviour
         {
             Activate(player.GetComponent<SpriteRenderer>());
         }
+    }
+    private IEnumerator GetGrids()
+    {
+        yield return new WaitForEndOfFrame();
+        grids = transform.parent.parent.GetComponent<GridInfo>();
+        grids.draw.SetActive(false);
     }
 }
