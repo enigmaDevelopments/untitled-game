@@ -50,4 +50,15 @@ public class StopBox : MonoBehaviour
             rb.constraints = RigidbodyConstraints2D.FreezeRotation;
         }
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player") && data.height == playerData.height)
+            topCollition.parent.gameObject.SetActive(true);
+    }
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+            topCollition.parent.gameObject.SetActive(false);
+    }
 }
