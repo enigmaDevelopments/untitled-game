@@ -59,7 +59,11 @@ public class PlayerController : MonoBehaviour
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
-        active = true;
+        Data info = collision.GetComponent<Data>();
+        if (info == null)
+            return;
+        if (info.height == data.height && info.isStair == data.isStair && info.stairAngle == data.stairAngle)
+            active = true;
     }
 }
 
