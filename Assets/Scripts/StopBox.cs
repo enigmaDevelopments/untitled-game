@@ -4,10 +4,12 @@ public class StopBox : MonoBehaviour
 {
     public Rigidbody2D rb;
     public Collider2D baseCollider;
+    public Collider2D differenceCollider;
     public SpriteRenderer spriteRenderer;
     public Data data;
     public GridInfo grids;
     public bool hidden = false;
+    private CompositeCollider2D compositeCollider;
     private Transform topCollition;
     private Transform player;
     private PlayerController playerController;
@@ -20,10 +22,13 @@ public class StopBox : MonoBehaviour
         Destroy(topCollition.GetComponent<SpriteRenderer>());
         foreach (Transform child in topCollition.transform)
             Destroy(child.gameObject);
-        topCollition.GetComponent<Collider2D>().compositeOperation = CompositeCollider2D.CompositeOperation.Merge;
+        Collider2D topCollider = topCollition.GetComponent<Collider2D>();
+        topCollider.compositeOperation = CompositeCollider2D.CompositeOperation.Merge;
+        topCollider.enabled = true;
         player = GameObject.FindGameObjectWithTag("Player").transform;
         playerController = player.GetComponent<PlayerController>();
         playerData = player.GetComponent<Data>();
+        compositeCollider = grids.draw.GetComponent<CompositeCollider2D>();
     }
     private void Update()
     {
@@ -34,6 +39,8 @@ public class StopBox : MonoBehaviour
         transform.parent.position = transform.position;
         transform.localPosition = Vector2.zero;
         topCollition.position = transform.position;
+        differenceCollider.enabled = playerData.height == data.height;
+        compositeCollider.GenerateGeometry();
     }
     private void OnCollisionExit2D(Collision2D collision)
     {

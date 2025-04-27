@@ -169,6 +169,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 7097400859406517036}
   baseCollider: {fileID: 9188458843869483256}
+  differenceCollider: {fileID: 4407824952259053906}
   spriteRenderer: {fileID: 6830277174378659856}
   data: {fileID: 5080258288843509443}
   grids: {fileID: 0}
@@ -275,7 +276,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 432855100671178736}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Density: 1
   m_Material: {fileID: 6200000, guid: 97cf6a7146c1c2046b27f07f228ef865, type: 2}
