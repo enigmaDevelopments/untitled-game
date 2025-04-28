@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 1340950364397921379}
   - component: {fileID: 1345027364912723575}
   - component: {fileID: 6571714504594615148}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -199,6 +199,7 @@ MonoBehaviour:
   speed: 5
   boxSpeed: 1
   pushingBox: 0
+  boxHorzontal: 0
 --- !u!114 &6571714504594615148
 MonoBehaviour:
   m_ObjectHideFlags: 0
