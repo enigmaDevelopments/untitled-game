@@ -1,6 +1,5 @@
 using UnityEngine;
 using System.Collections;
-using static UnityEditor.Searcher.SearcherWindow.Alignment;
 
 public class StopBox : MonoBehaviour
 {
@@ -20,6 +19,7 @@ public class StopBox : MonoBehaviour
     private Data playerData;
     private bool onBox = false;
     private bool isVertical;
+    private bool started = false;
     private void Start()
     {
         if (grids == null)
@@ -28,6 +28,12 @@ public class StopBox : MonoBehaviour
         playerController = player.GetComponent<PlayerController>();
         playerData = player.GetComponent<Data>();
         StartCoroutine(MakeTopCollition());
+        started = true;
+    }
+    private void Awake()
+    {
+        if (!started)
+        Start();
     }
     private void Update()
     {
