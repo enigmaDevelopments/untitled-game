@@ -19,10 +19,10 @@ public class Info : Data
     private IEnumerator SetData(Collider2D player)
     {
         yield return new WaitUntil(() => PlayerController.active);
-        if (GetComponent<Collider2D>().IsTouching(player))
+        yield return new WaitForSecondsRealtime(.03F);
+        if (GetComponent<Collider2D>().IsTouching(player) && PlayerController.active)
         {
             player.GetComponent<Data>().CopyTo(this);
-            yield return new WaitForEndOfFrame();
             PlayerController.active = false;
         }
     }

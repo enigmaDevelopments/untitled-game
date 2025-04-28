@@ -17,9 +17,11 @@ public class StopBox : MonoBehaviour
     private Transform topCollition;
     private Transform player;
     private PlayerController playerController;
+    private Rigidbody2D playerRb;
     private Data playerData;
     private bool onBox = false;
     private bool isVertical;
+    private int timer = 0;
     private void Start()
     {
         if (grids == null)
@@ -27,6 +29,7 @@ public class StopBox : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player").transform;
         playerController = player.GetComponent<PlayerController>();
         playerData = player.GetComponent<Data>();
+        playerRb = player.GetComponent<Rigidbody2D>();
         StartCoroutine(MakeTopCollition());
     }
     private void Update()
@@ -51,7 +54,20 @@ public class StopBox : MonoBehaviour
             playerData.height = data.height;
         }
         isVertical = Mathf.Abs(transform.position.x - player.position.x) < Mathf.Abs(transform.position.y - player.position.y - .5f);
-        baseCollider2.size = new Vector2(isVertical ? .4f : .975f, isVertical ? .975f : .4f);
+
+        if (0 < timer)
+        {
+            baseCollider2.size = new Vector2(isVertical ? .6f : .975f, isVertical ? .975f : .6f);
+            if (1000 < timer)
+                timer = -100;
+
+        }
+        else
+        {
+            baseCollider2.size = new Vector2(.975f, .975f);
+        }
+
+        timer++;
     }
     private void OnCollisionExit2D(Collision2D collision)
     {
