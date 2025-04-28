@@ -22,6 +22,7 @@ public class StopBox : MonoBehaviour
     private bool onBox = false;
     private bool isVertical;
     private int timer = 0;
+    private bool touching = false; 
     private void Start()
     {
         if (grids == null)
@@ -57,14 +58,19 @@ public class StopBox : MonoBehaviour
 
         if (0 < timer)
         {
-            baseCollider2.size = new Vector2(isVertical ? .6f : .975f, isVertical ? .975f : .6f);
-            if (1000 < timer)
-                timer = -100;
+            baseCollider2.size = new Vector2(isVertical ? .4f : .975f, isVertical ? .975f : .4f);
+            if (touching)
+                rb.constraints = RigidbodyConstraints2D.FreezeRotation | (isVertical ? RigidbodyConstraints2D.FreezePositionX : RigidbodyConstraints2D.FreezePositionY);
+            else
+                rb.constraints = RigidbodyConstraints2D.FreezeAll;
+            if (50 < timer)
+                timer = -2;
 
         }
         else
         {
-            baseCollider2.size = new Vector2(.975f, .975f);
+            baseCollider2.size =  new Vector2(isVertical ? .9f : .975f, isVertical ? .975f : .9f);
+            rb.constraints = RigidbodyConstraints2D.FreezeRotation;
         }
 
         timer++;
@@ -73,6 +79,7 @@ public class StopBox : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player") || collision.gameObject.CompareTag("box"))
         {
+            touching = false;
             if (collision.gameObject.CompareTag("Player"))
                 playerController.pushingBox = false;
             rb.constraints = RigidbodyConstraints2D.FreezeAll;
@@ -82,7 +89,7 @@ public class StopBox : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player") || collision.gameObject.CompareTag("box"))
         {
-            rb.constraints = RigidbodyConstraints2D.FreezeRotation| (isVertical ? RigidbodyConstraints2D.FreezePositionX: RigidbodyConstraints2D.FreezePositionY);
+            touching = true;
             if (collision.gameObject.CompareTag("Player"))
             {
                 playerController.pushingBox = true;
