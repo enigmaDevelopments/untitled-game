@@ -54,7 +54,6 @@ public class Hidden : MonoBehaviour
     {
         yield return new WaitForEndOfFrame();
         grids = transform.parent.parent.GetComponent<GridInfo>();
-        Debug.Log(gameObject);
         grids.draw.SetActive(false);
     }
 }

@@ -24,7 +24,6 @@ public class Info : Data
         {
             player.GetComponent<Data>().CopyTo(this);
             PlayerController.active = false;
-            Debug.Log(gameObject);
         }
     }
 }
