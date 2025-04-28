@@ -4,7 +4,7 @@ using System.Collections;
 public class StopBox : MonoBehaviour
 {
     public Rigidbody2D rb;
-    public Collider2D baseCollider;
+    public BoxCollider2D baseCollider;
     public Collider2D differenceCollider;
     public SpriteRenderer spriteRenderer;
     public Data data;
@@ -62,6 +62,7 @@ public class StopBox : MonoBehaviour
         {
             bool isVertical = Mathf.Abs(transform.position.x - player.position.x) < Mathf.Abs(transform.position.y - player.position.y - .5f);
             rb.constraints = RigidbodyConstraints2D.FreezeRotation| (isVertical ? RigidbodyConstraints2D.FreezePositionX: RigidbodyConstraints2D.FreezePositionY);
+            baseCollider.size = new Vector2(isVertical ? .4f : .675f, isVertical ? .675f:.4f);
             if (collision.gameObject.CompareTag("Player"))
             {
                 playerController.pushingBox = true;
