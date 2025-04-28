@@ -51,7 +51,8 @@ public class StopBox : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player") || collision.gameObject.CompareTag("box"))
         {
-            playerController.pushingBox = false;
+            if (collision.gameObject.CompareTag("Player"))
+                playerController.pushingBox = false;
             rb.constraints = RigidbodyConstraints2D.FreezeAll;
         }
     }
@@ -59,10 +60,13 @@ public class StopBox : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player") || collision.gameObject.CompareTag("box"))
         {
-            bool isHorizontal = Mathf.Abs(transform.position.x - player.position.x) < Mathf.Abs(transform.position.y - player.position.y - .5f);
-            playerController.pushingBox = true;
-            rb.constraints = RigidbodyConstraints2D.FreezeRotation| (isHorizontal ? RigidbodyConstraints2D.FreezePositionX: RigidbodyConstraints2D.FreezePositionY);
-            playerController.boxHorzontal = !isHorizontal;
+            bool isVertical = Mathf.Abs(transform.position.x - player.position.x) < Mathf.Abs(transform.position.y - player.position.y - .5f);
+            rb.constraints = RigidbodyConstraints2D.FreezeRotation| (isVertical ? RigidbodyConstraints2D.FreezePositionX: RigidbodyConstraints2D.FreezePositionY);
+            if (collision.gameObject.CompareTag("Player"))
+            {
+                playerController.pushingBox = true;
+                playerController.boxHorzontal = !isVertical;
+            }
 
         }
     }
