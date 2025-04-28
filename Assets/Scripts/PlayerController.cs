@@ -8,11 +8,11 @@ public class PlayerController : MonoBehaviour
     public LayerMask dataLayer;
     public float speed = 5f;
     public float boxSpeed = 1f;
+    public float stairSpeedMultiplier = .5f;
     public bool pushingBox = false;
     public bool boxHorzontal = false;
     public static bool active = false;
     private Vector2 lastMovmenmt = Vector2.zero;
-    private float currentSpeed;
 
     private void Start()
     {
@@ -21,15 +21,22 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
- 
-        Vector2 currentSpeed = new Vector2 (pushingBox && boxHorzontal ? boxSpeed : speed, pushingBox && !boxHorzontal ? boxSpeed : speed);
+
+        Vector2 currentSpeed = new Vector2(pushingBox && boxHorzontal ? boxSpeed : speed, pushingBox && !boxHorzontal ? boxSpeed : speed);
+        if (data.isStair)
+        {
+            if (data.stairAngle == 0)
+                currentSpeed.y *= stairSpeedMultiplier;
+            else
+                currentSpeed.x *= stairSpeedMultiplier;
+        }
         float Horizontal = Input.GetAxisRaw("Horizontal");
         float Vertical = Input.GetAxisRaw("Vertical");
         Vector2 movement = new Vector2(Horizontal, Vertical);
         movement = Vector2.ClampMagnitude(movement, 1);
         movement *= currentSpeed;
         rb.linearVelocity = movement;
-        
+
         animator.SetFloat("x", movement.x);
         animator.SetFloat("y", movement.y);
         if (movement != Vector2.zero)
@@ -43,11 +50,12 @@ public class PlayerController : MonoBehaviour
         animator.SetFloat("lastY", lastMovmenmt.y);
         animator.SetFloat("speed", movement.magnitude * 6f);
 
-        if (Input.GetButtonDown("Jump")) {
+        if (Input.GetButtonDown("Jump"))
+        {
             if (data.isStair)
                 return;
             Vector2 pos = transform.position + (Vector3)(lastMovmenmt.normalized * 3);
-            pos = new Vector2(Mathf.Floor(pos.x) + .5f, Mathf.Floor(pos.y) +.5f);
+            pos = new Vector2(Mathf.Floor(pos.x) + .5f, Mathf.Floor(pos.y) + .5f);
             Collider2D[] nodes = Physics2D.OverlapPointAll(pos, dataLayer);
             foreach (Collider2D node in nodes)
             {
