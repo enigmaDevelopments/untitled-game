@@ -1723,7 +1723,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8213511947509472506, guid: 27f0a8eef1910ef46875a22a20aab6b3, type: 3}
       propertyPath: height
-      value: 9
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: -8213511947509472506, guid: 27f0a8eef1910ef46875a22a20aab6b3, type: 3}
       propertyPath: isStair
@@ -1879,7 +1879,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8213511947509472506, guid: 27f0a8eef1910ef46875a22a20aab6b3, type: 3}
       propertyPath: height
-      value: 9
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: -8213511947509472506, guid: 27f0a8eef1910ef46875a22a20aab6b3, type: 3}
       propertyPath: isStair
@@ -2183,7 +2183,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8213511947509472506, guid: 27f0a8eef1910ef46875a22a20aab6b3, type: 3}
       propertyPath: height
-      value: 9
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: -8213511947509472506, guid: 27f0a8eef1910ef46875a22a20aab6b3, type: 3}
       propertyPath: isStair
