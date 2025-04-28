@@ -1,4 +1,6 @@
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.InputSystem.Android;
 
 public class PlayerController : MonoBehaviour
 {
@@ -23,18 +25,20 @@ public class PlayerController : MonoBehaviour
     {
 
         Vector2 currentSpeed = new Vector2(pushingBox && boxHorzontal ? boxSpeed : speed, pushingBox && !boxHorzontal ? boxSpeed : speed);
-        if (data.isStair)
-        {
-            if (data.stairAngle == 0)
-                currentSpeed.y *= stairSpeedMultiplier;
-            else
-                currentSpeed.x *= stairSpeedMultiplier;
-        }
         float Horizontal = Input.GetAxisRaw("Horizontal");
         float Vertical = Input.GetAxisRaw("Vertical");
         Vector2 movement = new Vector2(Horizontal, Vertical);
         movement = Vector2.ClampMagnitude(movement, 1);
         movement *= currentSpeed;
+        if (data.isStair)
+        {
+            if (data.stairAngle == 0)
+                movement.y *= stairSpeedMultiplier;
+            else
+                movement.x *= stairSpeedMultiplier;
+            movement = Quaternion.Euler(0f, 0f, data.stairAngle) * movement;
+        }
+
         rb.linearVelocity = movement;
 
         animator.SetFloat("x", movement.x);
