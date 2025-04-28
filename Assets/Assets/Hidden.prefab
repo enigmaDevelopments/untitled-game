@@ -1731,7 +1731,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8213511947509472506, guid: 27f0a8eef1910ef46875a22a20aab6b3, type: 3}
       propertyPath: stairAngle
-      value: 215
+      value: -26.565
       objectReference: {fileID: 0}
     - target: {fileID: 764202965206167846, guid: 27f0a8eef1910ef46875a22a20aab6b3, type: 3}
       propertyPath: draw
@@ -1887,7 +1887,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8213511947509472506, guid: 27f0a8eef1910ef46875a22a20aab6b3, type: 3}
       propertyPath: stairAngle
-      value: 45
+      value: 26.565
       objectReference: {fileID: 0}
     - target: {fileID: 764202965206167846, guid: 27f0a8eef1910ef46875a22a20aab6b3, type: 3}
       propertyPath: draw
