@@ -9,6 +9,7 @@ public class PlayerController : MonoBehaviour
     public float speed = 5f;
     public float boxSpeed = 1f;
     public bool pushingBox = false;
+    public bool boxHorzontal = false;
     public static bool active = false;
     private Vector2 lastMovmenmt = Vector2.zero;
     private float currentSpeed;
@@ -20,7 +21,8 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        currentSpeed = pushingBox? boxSpeed : speed;
+ 
+        Vector2 currentSpeed = new Vector2 (pushingBox && boxHorzontal ? boxSpeed : speed, pushingBox && !boxHorzontal ? boxSpeed : speed);
         float Horizontal = Input.GetAxisRaw("Horizontal");
         float Vertical = Input.GetAxisRaw("Vertical");
         Vector2 movement = new Vector2(Horizontal, Vertical);
