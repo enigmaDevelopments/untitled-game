@@ -60,7 +60,8 @@ public class StopBox : MonoBehaviour
         if (collision.gameObject.CompareTag("Player") || collision.gameObject.CompareTag("box"))
         {
             playerController.pushingBox = true;
-            rb.constraints = RigidbodyConstraints2D.FreezeRotation;
+            rb.constraints = RigidbodyConstraints2D.FreezeRotation| (Mathf.Abs(transform.position.x - player.position.x) < Mathf.Abs(transform.position.y - player.position.y - .5f) ? RigidbodyConstraints2D.FreezePositionX: RigidbodyConstraints2D.FreezePositionY);
+            
         }
     }
 
