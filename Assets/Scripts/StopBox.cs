@@ -1,11 +1,14 @@
 using UnityEngine;
 using System.Collections;
+using static UnityEditor.Searcher.SearcherWindow.Alignment;
 
 public class StopBox : MonoBehaviour
 {
     public Rigidbody2D rb;
-    public BoxCollider2D baseCollider;
+    public Collider2D baseCollider;
+    public BoxCollider2D baseCollider2;
     public Collider2D differenceCollider;
+    public Transform base2;
     public SpriteRenderer spriteRenderer;
     public Data data;
     public GridInfo grids;
@@ -16,6 +19,7 @@ public class StopBox : MonoBehaviour
     private PlayerController playerController;
     private Data playerData;
     private bool onBox = false;
+    private bool isVertical;
     private void Start()
     {
         if (grids == null)
@@ -27,7 +31,7 @@ public class StopBox : MonoBehaviour
     }
     private void Update()
     {
-        spriteRenderer.sortingLayerName = (player.position.y < transform.position.y-.05f || data.height == playerData.height? "collition" : "walk behind") + (hidden ? "-hidden" : "");
+        spriteRenderer.sortingLayerName = (player.position.y < transform.position.y || data.height == playerData.height? "collition" : "walk behind") + (hidden ? "-hidden" : "");
     }
     private void FixedUpdate()
     {
@@ -46,6 +50,8 @@ public class StopBox : MonoBehaviour
             topCollition.parent.gameObject.SetActive(true);
             playerData.height = data.height;
         }
+        isVertical = Mathf.Abs(transform.position.x - player.position.x) < Mathf.Abs(transform.position.y - player.position.y - .5f);
+        baseCollider2.size = new Vector2(isVertical ? .4f : .975f, isVertical ? .975f : .4f);
     }
     private void OnCollisionExit2D(Collision2D collision)
     {
@@ -60,9 +66,7 @@ public class StopBox : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player") || collision.gameObject.CompareTag("box"))
         {
-            bool isVertical = Mathf.Abs(transform.position.x - player.position.x) < Mathf.Abs(transform.position.y - player.position.y - .5f);
             rb.constraints = RigidbodyConstraints2D.FreezeRotation| (isVertical ? RigidbodyConstraints2D.FreezePositionX: RigidbodyConstraints2D.FreezePositionY);
-            baseCollider.size = new Vector2(isVertical ? .4f : .675f, isVertical ? .675f:.4f);
             if (collision.gameObject.CompareTag("Player"))
             {
                 playerController.pushingBox = true;

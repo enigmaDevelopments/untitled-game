@@ -67,5 +67,9 @@ public class PlayerController : MonoBehaviour
         if (info.height == data.height && info.isStair == data.isStair && info.stairAngle == data.stairAngle)
             active = true;
     }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        Debug.Log(collision.gameObject);
+    }
 }
 
