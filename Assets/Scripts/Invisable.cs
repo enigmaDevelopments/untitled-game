@@ -4,6 +4,6 @@ public class Invisable : MonoBehaviour
 {
     void Start()
     {
-        GetComponent<Renderer>().enabled = false;
+        Destroy(GetComponent<Renderer>());
     }
 }
