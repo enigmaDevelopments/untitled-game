@@ -23,7 +23,7 @@ public class Hidden : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             Collition(true);
-            collision.GetComponent<SpriteRenderer>().sortingLayerName = "player";
+            collision.GetComponent<SpriteRenderer>().sortingLayerName = "main";
         }
     }
     private void Collition (bool set)
@@ -37,7 +37,7 @@ public class Hidden : MonoBehaviour
     private void Activate(SpriteRenderer player)
     {
         Collition(false);
-        player.sortingLayerName = "player-hidden";
+        player.sortingLayerName = "main-hidden";
     }
     private IEnumerator Wait(Collider2D player)
     {
