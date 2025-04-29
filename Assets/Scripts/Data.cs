@@ -2,9 +2,9 @@ using UnityEngine;
 
 public class Data : MonoBehaviour
 {
-    public int height;
-    public float stairAngle;
-    public bool isStair;
+    public int height = 0;
+    public float stairAngle = 0f;
+    public bool isStair = false;
 
     public void CopyTo(Data data)
     {
