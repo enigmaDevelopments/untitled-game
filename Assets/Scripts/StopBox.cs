@@ -19,7 +19,6 @@ public class StopBox : MonoBehaviour
     private Data playerData;
     private bool onBox = false;
     private bool isVertical;
-    private bool started = false;
     private void Start()
     {
         if (grids == null)
@@ -35,12 +34,6 @@ public class StopBox : MonoBehaviour
         topCollider.compositeOperation = Collider2D.CompositeOperation.Merge;
         topCollider.enabled = true;
         compositeCollider = grids.draw.GetComponent<CompositeCollider2D>();
-        started = true;
-    }
-    private void Awake()
-    {
-        if (!started)
-            Start();
     }
     private void Update()
     {
