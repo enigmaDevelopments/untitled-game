@@ -39,41 +39,23 @@ TagManager:
   - 
   - 
   m_SortingLayers:
-  - name: floor
-    uniqueID: 1243149181
-    locked: 0
   - name: walk in front
     uniqueID: 2136598847
     locked: 0
-  - name: collition
-    uniqueID: 3056122589
-    locked: 0
-  - name: player
+  - name: main
     uniqueID: 2093862983
     locked: 0
   - name: walk behind
     uniqueID: 3106782095
     locked: 0
-  - name: decor
-    uniqueID: 3706482501
-    locked: 0
-  - name: floor-hidden
-    uniqueID: 4120038135
-    locked: 0
   - name: walk in front-hidden
     uniqueID: 173181291
     locked: 0
-  - name: collition-hidden
-    uniqueID: 1589030537
-    locked: 0
-  - name: player-hidden
+  - name: main-hidden
     uniqueID: 3827335435
     locked: 0
   - name: walk behind-hidden
     uniqueID: 1402855625
-    locked: 0
-  - name: decor-hidden
-    uniqueID: 1270685827
     locked: 0
   - name: Default
     uniqueID: 0
