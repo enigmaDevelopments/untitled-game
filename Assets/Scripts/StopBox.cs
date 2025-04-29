@@ -33,11 +33,11 @@ public class StopBox : MonoBehaviour
     private void Awake()
     {
         if (!started)
-        Start();
+            Start();
     }
     private void Update()
     {
-        spriteRenderer.sortingLayerName = "walk " + (player.position.y < transform.position.y || data.height == playerData.height? "in frount" : "behind") + (hidden ? "-hidden" : "");
+        spriteRenderer.sortingLayerName = (data.height == playerData.height? "walk in front" : "main") + (hidden ? "-hidden" : "");
     }
     private void FixedUpdate()
     {

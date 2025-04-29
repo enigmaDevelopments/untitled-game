@@ -12,8 +12,8 @@ ScriptedImporter:
   texturedSpriteMeshType: 0
   svgPixelsPerUnit: 100
   gradientResolution: 64
-  alignment: 0
-  customPivot: {x: 0.5, y: 0.75}
+  alignment: 9
+  customPivot: {x: 0.5, y: 0.4875}
   generatePhysicsShape: 0
   viewportOptions: 0
   preserveViewport: 0
