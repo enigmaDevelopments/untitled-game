@@ -213,6 +213,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2397d9482da3d304385d29b712d4b9ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  height: 0
+  height: 2
   stairAngle: 0
   isStair: 0

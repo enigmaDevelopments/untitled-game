@@ -16,11 +16,6 @@ public class PlayerController : MonoBehaviour
     public static bool active = false;
     private Vector2 lastMovmenmt = Vector2.zero;
 
-    private void Start()
-    {
-        data.CopyTo(Physics2D.OverlapPoint(transform.position, dataLayer).GetComponent<Info>());
-    }
-
     void Update()
     {
 
