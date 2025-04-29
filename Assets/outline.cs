@@ -21,7 +21,7 @@ public class outline : MonoBehaviour
                 Vector3[] points3D = Array.ConvertAll(points, i => new Vector3(i.x, i.y, 0));
                 line.positionCount = points3D.Length;
                 line.SetPositions(points3D);
-                line.Simplify(.5f);
+                line.Simplify(.2f);
             }
         }
         Destroy(lineObj);
