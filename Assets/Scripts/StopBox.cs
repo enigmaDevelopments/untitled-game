@@ -27,7 +27,14 @@ public class StopBox : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player").transform;
         playerController = player.GetComponent<PlayerController>();
         playerData = player.GetComponent<Data>();
-        StartCoroutine(MakeTopCollition());
+        topCollition = Instantiate(transform.parent.gameObject, grids.collition.transform.GetChild(data.height)).transform;
+        Destroy(topCollition.GetComponent<SpriteRenderer>());
+        foreach (Transform child in topCollition.transform)
+            Destroy(child.gameObject);
+        Collider2D topCollider = topCollition.GetComponent<Collider2D>();
+        topCollider.compositeOperation = Collider2D.CompositeOperation.Merge;
+        topCollider.enabled = true;
+        compositeCollider = grids.draw.GetComponent<CompositeCollider2D>();
         started = true;
     }
     private void Awake()
@@ -97,17 +104,5 @@ public class StopBox : MonoBehaviour
             onBox = false;
             topCollition.parent.gameObject.SetActive(false);
         }
-    }
-    private IEnumerator MakeTopCollition()
-    {
-        yield return new WaitForEndOfFrame();
-        topCollition = Instantiate(transform.parent.gameObject, grids.collition.transform.GetChild(data.height)).transform;
-        Destroy(topCollition.GetComponent<SpriteRenderer>());
-        foreach (Transform child in topCollition.transform)
-            Destroy(child.gameObject);
-        Collider2D topCollider = topCollition.GetComponent<Collider2D>();
-        topCollider.compositeOperation = Collider2D.CompositeOperation.Merge;
-        topCollider.enabled = true;
-        compositeCollider = grids.draw.GetComponent<CompositeCollider2D>();
     }
 }
