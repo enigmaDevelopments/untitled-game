@@ -30,12 +30,9 @@ public class Hidden : MonoBehaviour
     {
         grids.draw.SetActive(!set);
         grids.active = !set;
-        foreach (Transform child in grids.main.transform)
-        {
-            Collider2D[] grandchildern = child.GetComponentsInChildren<Collider2D>();
-            foreach (Collider2D grandchild in grandchildern)
-                grandchild.enabled = set;
-        }
+
+        foreach (Collider2D child in grids.main.GetComponent<GridInfo>().draw.GetComponentsInChildren<Collider2D>())
+            child.enabled = set;
     }
     private void Activate(SpriteRenderer player)
     {
