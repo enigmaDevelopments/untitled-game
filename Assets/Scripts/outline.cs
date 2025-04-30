@@ -18,7 +18,7 @@ public class outline : MonoBehaviour
                 LineRenderer line = Instantiate(lineObj, transform).GetComponent<LineRenderer>();
                 Vector2[] points = new Vector2[collider.GetPathPointCount(i)];
                 collider.GetPath(i, points);
-                Vector3[] points3D = Array.ConvertAll(points, i => new Vector3(i.x, i.y, 0));
+                Vector3[] points3D = Array.ConvertAll(points, i => new Vector3(Mathf.Round(i.x), Mathf.Round(i.y), 0));
                 line.positionCount = points3D.Length;
                 line.SetPositions(points3D);
                 line.Simplify(.2f);
