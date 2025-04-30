@@ -4,11 +4,15 @@ public class GameVaribles : MonoBehaviour
 {
     public GameObject playerAsset;
     public static Vector3 playerPos;
-    public static Data playerData;
+    public static int height;
+    public static float stairAngle;
+    public static bool isStair;
     void Awake()
     {
         GameObject player = Instantiate(playerAsset, playerPos, Quaternion.identity);
-        if (playerData != null)
-            player.GetComponent<Data>().CopyTo(playerData);
+        Data playerData = player.GetComponent<Data>();
+        playerData.height = height;
+        playerData.stairAngle = stairAngle;
+        playerData.isStair = isStair;
     }
 }
