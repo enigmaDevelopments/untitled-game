@@ -12,6 +12,11 @@ public class TileCopier : MonoBehaviour
         newLayer.gameObject.layer = layer;
         foreach (Transform child in newLayer)
         {
+            if (child.CompareTag("not grid"))
+            {
+                Destroy(child.gameObject);
+                continue;
+            }
             CompositeCollider2D compositeCollider = child.GetComponent<CompositeCollider2D>();
             compositeCollider.geometryType = CompositeCollider2D.GeometryType.Outlines;
             compositeCollider.isTrigger = false;
