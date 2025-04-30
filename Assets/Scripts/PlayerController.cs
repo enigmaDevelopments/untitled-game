@@ -1,5 +1,6 @@
 using Unity.VisualScripting;
 using UnityEngine;
+using System;
 using UnityEngine.InputSystem.Android;
 
 public class PlayerController : MonoBehaviour
@@ -53,7 +54,7 @@ public class PlayerController : MonoBehaviour
         {
             if (data.isStair)
                 return;
-            Vector2 pos = transform.position + (Vector3)(lastMovmenmt.normalized * 3);
+            Vector2 pos = new Vector2(transform.position.x + MathF.Sign(lastMovmenmt.x) * 3, transform.position.y + MathF.Sign(lastMovmenmt.y) * 3);
             pos = new Vector2(Mathf.Floor(pos.x) + .5f, Mathf.Floor(pos.y) + .5f);
             Collider2D[] nodes = Physics2D.OverlapPointAll(pos, dataLayer);
             foreach (Collider2D node in nodes)
