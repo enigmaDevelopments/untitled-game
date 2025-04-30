@@ -8,7 +8,7 @@
    id="SVGRoot"
    version="1.1"
    enable-background="new"
-   sodipodi:docname="floor.svg"
+   sodipodi:docname="stairs down.svg"
    inkscape:export-filename="..\..\..\..\..\..\..\Users\hayde\OneDrive\Pictures\game\time\line.svg"
    inkscape:export-xdpi="96"
    inkscape:export-ydpi="96"
@@ -26,15 +26,15 @@
      inkscape:pageopacity="0.0"
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
-     inkscape:zoom="2"
-     inkscape:cx="-10"
-     inkscape:cy="59"
+     inkscape:zoom="2.8284271"
+     inkscape:cx="40.65864"
+     inkscape:cy="59.043416"
      inkscape:window-width="1280"
      inkscape:window-height="650"
      inkscape:window-x="1074"
      inkscape:window-y="262"
      inkscape:window-maximized="1"
-     inkscape:current-layer="g1" />
+     inkscape:current-layer="SVGRoot" />
   <defs
      id="defs4787" />
   <rect
@@ -70,4 +70,12 @@
      style="fill:#ffffff;fill-rule:evenodd;stroke:#000000;stroke-width:5;stroke-linecap:butt;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
      d="M 0,74.5 H 100.00001"
      id="path5" />
+  <path
+     style="fill:#000000;fill-rule:evenodd;stroke:#000000;stroke-width:5;stroke-linejoin:round;stroke-dasharray:none;paint-order:fill markers stroke"
+     d="M 2.5,100.00001 V 0"
+     id="path1" />
+  <path
+     style="fill:#000000;fill-rule:evenodd;stroke:#000000;stroke-width:5;stroke-linejoin:round;stroke-dasharray:none;paint-order:fill markers stroke"
+     d="M 97.500008,100.00001 V 0"
+     id="path2" />
 </svg>
