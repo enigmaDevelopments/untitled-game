@@ -471,6 +471,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: level exit (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 7220557426852866759, guid: 8265371d76f56a948b05b374e2fde294, type: 3}
+      propertyPath: height
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7220557426852866759, guid: 8265371d76f56a948b05b374e2fde294, type: 3}
+      propertyPath: isStair
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7587159931677480284, guid: 8265371d76f56a948b05b374e2fde294, type: 3}
+      propertyPath: sceneName
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7587159931677480284, guid: 8265371d76f56a948b05b374e2fde294, type: 3}
+      propertyPath: startingPos.x
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7587159931677480284, guid: 8265371d76f56a948b05b374e2fde294, type: 3}
+      propertyPath: startingPos.y
+      value: -4.8
+      objectReference: {fileID: 0}
     - target: {fileID: 8493479400303164979, guid: 8265371d76f56a948b05b374e2fde294, type: 3}
       propertyPath: m_LocalScale.x
       value: 1.9999499
