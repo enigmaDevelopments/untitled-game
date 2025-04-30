@@ -71,72 +71,6 @@
        random_gap_y="false"
        random_gap_x="false"
        transformorigin="scale(1,0.91663845)" />
-    <inkscape:path-effect
-       effect="tiling"
-       id="path-effect1"
-       is_visible="true"
-       lpeversion="1"
-       unit="px"
-       seed="1;1"
-       lpesatellites=""
-       num_rows="4"
-       num_cols="1"
-       gapx="0"
-       gapy="0"
-       offset="0"
-       offset_type="false"
-       scale="0"
-       rotate="0"
-       mirrorrowsx="false"
-       mirrorrowsy="false"
-       mirrorcolsx="false"
-       mirrorcolsy="false"
-       mirrortrans="false"
-       shrink_interp="true"
-       split_items="true"
-       link_styles="true"
-       interpolate_scalex="false"
-       interpolate_scaley="true"
-       interpolate_rotatex="false"
-       interpolate_rotatey="true"
-       random_scale="false"
-       random_rotate="false"
-       random_gap_y="false"
-       random_gap_x="false"
-       transformorigin="" />
-    <inkscape:path-effect
-       effect="tiling"
-       id="path-effect28"
-       is_visible="true"
-       lpeversion="1"
-       unit="px"
-       seed="1;1"
-       lpesatellites=""
-       num_rows="4"
-       num_cols="1"
-       gapx="0"
-       gapy="0"
-       offset="0"
-       offset_type="false"
-       scale="0"
-       rotate="0"
-       mirrorrowsx="false"
-       mirrorrowsy="false"
-       mirrorcolsx="false"
-       mirrorcolsy="false"
-       mirrortrans="false"
-       shrink_interp="false"
-       split_items="true"
-       link_styles="false"
-       interpolate_scalex="false"
-       interpolate_scaley="true"
-       interpolate_rotatex="false"
-       interpolate_rotatey="true"
-       random_scale="false"
-       random_rotate="false"
-       random_gap_y="false"
-       random_gap_x="false"
-       transformorigin="" />
     <linearGradient
        id="linearGradient3"
        inkscape:collect="always">
@@ -161,96 +95,6 @@
     <linearGradient
        inkscape:collect="always"
        xlink:href="#linearGradient3"
-       id="linearGradient27"
-       gradientUnits="userSpaceOnUse"
-       x1="49.999569"
-       y1="-50.00172"
-       x2="49.999565"
-       y2="-41.668381" />
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient3"
-       gradientUnits="userSpaceOnUse"
-       x1="49.999569"
-       y1="-50.00172"
-       x2="49.999565"
-       y2="-41.668381"
-       id="linearGradient1" />
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient3"
-       gradientUnits="userSpaceOnUse"
-       x1="49.999569"
-       y1="-50.00172"
-       x2="49.999565"
-       y2="-41.668381"
-       id="linearGradient2" />
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient3"
-       gradientUnits="userSpaceOnUse"
-       x1="49.999569"
-       y1="-50.00172"
-       x2="49.999565"
-       y2="-41.668381"
-       id="linearGradient5" />
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient3"
-       gradientUnits="userSpaceOnUse"
-       x1="49.999569"
-       y1="-50.00172"
-       x2="49.999565"
-       y2="-41.668381"
-       id="linearGradient6" />
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient3"
-       gradientUnits="userSpaceOnUse"
-       x1="49.999569"
-       y1="-50.00172"
-       x2="49.999565"
-       y2="-41.668381"
-       id="linearGradient7" />
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient3"
-       gradientUnits="userSpaceOnUse"
-       x1="49.999569"
-       y1="-50.00172"
-       x2="49.999565"
-       y2="-41.668381"
-       id="linearGradient8" />
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient3"
-       id="linearGradient38"
-       gradientUnits="userSpaceOnUse"
-       x1="49.999569"
-       y1="-50.00172"
-       x2="49.999565"
-       y2="-41.668381" />
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient3"
-       id="linearGradient39"
-       gradientUnits="userSpaceOnUse"
-       x1="49.999569"
-       y1="-50.00172"
-       x2="49.999565"
-       y2="-41.668381" />
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient3"
-       id="linearGradient40"
-       gradientUnits="userSpaceOnUse"
-       x1="49.999569"
-       y1="-50.00172"
-       x2="49.999565"
-       y2="-41.668381" />
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient3"
        id="linearGradient50"
        gradientUnits="userSpaceOnUse"
        x1="49.999569"
@@ -270,33 +114,6 @@
        inkscape:collect="always"
        xlink:href="#linearGradient3"
        id="linearGradient54"
-       gradientUnits="userSpaceOnUse"
-       x1="49.999569"
-       y1="-50.00172"
-       x2="49.999565"
-       y2="-41.668381" />
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient3"
-       id="linearGradient61"
-       gradientUnits="userSpaceOnUse"
-       x1="49.999569"
-       y1="-50.00172"
-       x2="49.999565"
-       y2="-41.668381" />
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient3"
-       id="linearGradient62"
-       gradientUnits="userSpaceOnUse"
-       x1="49.999569"
-       y1="-50.00172"
-       x2="49.999565"
-       y2="-41.668381" />
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient3"
-       id="linearGradient63"
        gradientUnits="userSpaceOnUse"
        x1="49.999569"
        y1="-50.00172"
@@ -391,15 +208,15 @@
   <g
      id="g12">
     <path
-       style="fill:#ffffff;fill-rule:evenodd;stroke:#000000;stroke-width:3;stroke-linejoin:round;paint-order:fill markers stroke;stroke-dasharray:none"
+       style="fill:#ffffff;fill-rule:evenodd;stroke:#000000;stroke-width:3;stroke-linejoin:round;stroke-dasharray:none;paint-order:fill markers stroke"
        d="M 1.2109756e-6,91.667 H 100.00085"
        id="path1" />
     <path
-       style="fill:#ffffff;fill-rule:evenodd;stroke:#000000;stroke-width:3;stroke-linejoin:round;paint-order:fill markers stroke;stroke-dasharray:none"
+       style="fill:#ffffff;fill-rule:evenodd;stroke:#000000;stroke-width:3;stroke-linejoin:round;stroke-dasharray:none;paint-order:fill markers stroke"
        d="M -7.1525574e-7,76.388908 100.00085,76.388904"
        id="path2" />
     <path
-       style="fill:#ffffff;fill-rule:evenodd;stroke:#000000;stroke-width:3;stroke-linejoin:round;paint-order:fill markers stroke;stroke-dasharray:none"
+       style="fill:#ffffff;fill-rule:evenodd;stroke:#000000;stroke-width:3;stroke-linejoin:round;stroke-dasharray:none;paint-order:fill markers stroke"
        d="M -7.1525574e-7,68.750249 H 100.00085"
        id="path3" />
     <path
@@ -441,25 +258,5 @@
        style="fill:#000000;fill-rule:evenodd;stroke:#000000;stroke-width:3;stroke-linecap:butt;stroke-linejoin:round;paint-order:fill markers stroke"
        d="M 1.5,76.388907 V 91.667001"
        id="path14" />
-  </g>
-  <g
-     id="g18"
-     transform="translate(97.000846)">
-    <path
-       style="fill:#000000;fill-rule:evenodd;stroke:#000000;stroke-width:3;stroke-linecap:butt;stroke-linejoin:round;paint-order:fill markers stroke"
-       d="M 1.5,7.6386556 V 22.916749"
-       id="path15" />
-    <path
-       style="fill:#000000;fill-rule:evenodd;stroke:#000000;stroke-width:3;stroke-linecap:butt;stroke-linejoin:round;paint-order:fill markers stroke"
-       d="M 1.5,30.555405 V 45.833499"
-       id="path16" />
-    <path
-       style="fill:#000000;fill-rule:evenodd;stroke:#000000;stroke-width:3;stroke-linecap:butt;stroke-linejoin:round;paint-order:fill markers stroke"
-       d="M 1.5,53.472156 V 68.75025"
-       id="path17" />
-    <path
-       style="fill:#000000;fill-rule:evenodd;stroke:#000000;stroke-width:3;stroke-linecap:butt;stroke-linejoin:round;paint-order:fill markers stroke"
-       d="M 1.5,76.388907 V 91.667001"
-       id="path18" />
   </g>
 </svg>
