@@ -37,7 +37,7 @@ public class StopBox : MonoBehaviour
     }
     private void Update()
     {
-        spriteRenderer.sortingLayerName = (data.height == playerData.height? "walk in front" : "main") + (hidden ? "-hidden" : "");
+        spriteRenderer.sortingLayerName = "walk " + (data.height == playerData.height? "in front" : "behind") + (hidden ? "-hidden" : "");
     }
     private void FixedUpdate()
     {
