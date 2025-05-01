@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class GameVaribles : MonoBehaviour
+public class PlayerSpawner : MonoBehaviour
 {
     public GameObject playerAsset;
     public static Vector3 playerPos;

@@ -11,10 +11,10 @@ public class SwitchLevel : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            GameVaribles.height = startingData.height;
-            GameVaribles.stairAngle = startingData.stairAngle;
-            GameVaribles.isStair = startingData.isStair;
-            GameVaribles.playerPos = startingPos;
+            PlayerSpawner.height = startingData.height;
+            PlayerSpawner.stairAngle = startingData.stairAngle;
+            PlayerSpawner.isStair = startingData.isStair;
+            PlayerSpawner.playerPos = startingPos;
             SceneManager.LoadScene(sceneName);
         }
     }

@@ -34,10 +34,10 @@ public class Timer : MonoBehaviour
             timerText.text = "0:00";
             SceneManager.LoadScene(0);
             timer = time;
-            GameVaribles.playerPos = Vector2.zero;
-            GameVaribles.height = 0;
-            GameVaribles.stairAngle = 0;
-            GameVaribles.isStair = false;
+            PlayerSpawner.playerPos = Vector2.zero;
+            PlayerSpawner.height = 0;
+            PlayerSpawner.stairAngle = 0;
+            PlayerSpawner.isStair = false;
         }
         if (kill)
             Destroy(gameObject);
