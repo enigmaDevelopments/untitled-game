@@ -31,7 +31,10 @@ public class Timer : MonoBehaviour
             timerText.text = string.Format("{0:0}:{1:00}", (int)(timer / 60), (int)(timer % 60));
         if (timer <= 0)
         {
-            timerText.text = "0:00";
+            if (time <= 60)
+                timerText.text = "0";
+            else
+                timerText.text = "0:00";
             SceneManager.LoadScene(0);
             timer = time;
             PlayerSpawner.playerPos = Vector2.zero;

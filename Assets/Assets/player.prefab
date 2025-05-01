@@ -197,7 +197,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   speed: 5
-  boxSpeed: 1
+  boxSpeed: 2
   stairSpeedMultiplier: 0.5
   pushingBox: 0
   boxHorzontal: 0

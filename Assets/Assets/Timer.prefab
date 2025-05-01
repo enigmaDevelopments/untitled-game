@@ -65,7 +65,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 100
+  m_text: 1:00
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 3ca61ad7e37ef8944bba449bd1617b34, type: 2}
   m_sharedMaterial: {fileID: 6361035306721229860, guid: 3ca61ad7e37ef8944bba449bd1617b34, type: 2}
@@ -252,5 +252,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timerText: {fileID: 4871509784128630639}
-  time: 60
+  time: 30
   timer: 120
