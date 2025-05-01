@@ -4,10 +4,11 @@ using System.Collections;
 public class Hidden : MonoBehaviour
 {
     public Data data;
-    private GridInfo grids;
+    public GridInfo grids;
     void Start()
     {
-        grids = transform.parent.parent.GetComponent<GridInfo>();
+        if (grids == null)
+            grids = transform.parent.parent.GetComponent<GridInfo>();
         grids.draw.SetActive(false);
     }
     private void OnTriggerEnter2D(Collider2D collision)
@@ -23,6 +24,10 @@ public class Hidden : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
+            if (CompareTag("box"))
+                foreach (Collider2D child in grids.detectors.GetComponentsInChildren<Collider2D>())
+                    if (child.IsTouching(collision))
+                        return;
             Collition(true);
             collision.GetComponent<SpriteRenderer>().sortingLayerName = "main";
         }

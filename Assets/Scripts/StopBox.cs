@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+using Unity.VisualScripting;
 
 public class StopBox : MonoBehaviour
 {
@@ -7,6 +8,7 @@ public class StopBox : MonoBehaviour
     public Collider2D baseCollider;
     public BoxCollider2D baseCollider2;
     public Collider2D differenceCollider;
+    public Transform top;
     public Transform base2;
     public SpriteRenderer spriteRenderer;
     public Data data;
@@ -34,6 +36,13 @@ public class StopBox : MonoBehaviour
         topCollider.compositeOperation = Collider2D.CompositeOperation.Merge;
         topCollider.enabled = true;
         compositeCollider = grids.draw.GetComponent<CompositeCollider2D>();
+        top.parent = grids.detectors.transform;
+        if  (hidden)
+        {
+            Hidden hidden = top.AddComponent<Hidden>();
+            hidden.data = data;
+            hidden.grids = grids;
+        }
     }
     private void Update()
     {
@@ -46,6 +55,7 @@ public class StopBox : MonoBehaviour
         transform.parent.position = transform.position;
         transform.localPosition = Vector2.zero;
         topCollition.position = transform.position;
+        top.position = transform.position;
         bool playerAbove = playerData.height == data.height;
         differenceCollider.enabled = playerAbove;
         baseCollider.enabled = !playerAbove;
@@ -84,18 +94,18 @@ public class StopBox : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Player") && data.height == playerData.height)
-        {
-            onBox = true;
-            topCollition.parent.gameObject.SetActive(true);
-        }
+        Trigger(collision, true);
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Player"))
+        Trigger(collision, false);
+    }
+    public void Trigger(Collider2D collision,bool enter)
+    {
+        if (collision.gameObject.CompareTag("Player") && data.height == playerData.height)
         {
-            onBox = false;
-            topCollition.parent.gameObject.SetActive(false);
+            onBox = enter;
+            topCollition.parent.gameObject.SetActive(enter);
         }
     }
 }
