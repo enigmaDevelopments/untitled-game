@@ -3,7 +3,6 @@ using UnityEngine.Tilemaps;
 
 public class BoxTileCreator : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         GetComponent<TilemapCollider2D>().extrusionFactor = 1;
