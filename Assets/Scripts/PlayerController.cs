@@ -1,7 +1,5 @@
-using Unity.VisualScripting;
 using UnityEngine;
 using System;
-using UnityEngine.InputSystem.Android;
 
 public class PlayerController : MonoBehaviour
 {
