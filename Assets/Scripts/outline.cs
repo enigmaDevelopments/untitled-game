@@ -10,7 +10,7 @@ public class outline : MonoBehaviour
          
         foreach (Transform child in grides.detectors.transform)
         {
-            if (child.GetComponent<Data>().isStair)
+            if (child.GetComponent<Data>().isStair || child.CompareTag("box"))
                 continue;
             CompositeCollider2D collider = child.GetComponent<CompositeCollider2D>();
             for (int i = 0; i < collider.pathCount; i++)

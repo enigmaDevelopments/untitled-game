@@ -203,6 +203,7 @@ MonoBehaviour:
   baseCollider: {fileID: 5875302352489553642}
   baseCollider2: {fileID: 7835375141913864027}
   differenceCollider: {fileID: 4407824952259053906}
+  top: {fileID: 275755194374894133}
   base2: {fileID: 8696501157844728132}
   spriteRenderer: {fileID: 6830277174378659856}
   data: {fileID: 1052423502216050792}
@@ -219,9 +220,10 @@ GameObject:
   - component: {fileID: 275755194374894133}
   - component: {fileID: 7805145305863724636}
   - component: {fileID: 1052423502216050792}
+  - component: {fileID: 1898290002920966116}
   m_Layer: 6
   m_Name: top
-  m_TagString: Untagged
+  m_TagString: box
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -299,9 +301,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2397d9482da3d304385d29b712d4b9ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  height: 0
+  height: 2
   stairAngle: 0
   isStair: 0
+--- !u!114 &1898290002920966116
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8276711676895807431}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de07013b536ea804faabf67f4b7b10e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &5478798197485401129
 PrefabInstance:
   m_ObjectHideFlags: 0
