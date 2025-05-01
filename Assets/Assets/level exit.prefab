@@ -162,7 +162,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startingData: {fileID: 7220557426852866759}
-  sceneName: 
+  sceneName: fin
   startingPos: {x: 0, y: 0}
 --- !u!114 &7220557426852866759
 MonoBehaviour:
