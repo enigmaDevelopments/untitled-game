@@ -10,6 +10,7 @@ public class Hidden : MonoBehaviour
         if (grids == null)
             grids = transform.parent.parent.GetComponent<GridInfo>();
         grids.draw.SetActive(false);
+        Collition(true);
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
