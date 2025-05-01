@@ -8,6 +8,7 @@ public class Timer : MonoBehaviour
     public float time = 120f;
     public float timer = 120f;
     private static bool isTimerActive = false;
+    public static bool kill = false;
     void Start()
     {
         if (isTimerActive)
@@ -38,5 +39,7 @@ public class Timer : MonoBehaviour
             GameVaribles.stairAngle = 0;
             GameVaribles.isStair = false;
         }
+        if (kill)
+            Destroy(gameObject);
     }
 }
